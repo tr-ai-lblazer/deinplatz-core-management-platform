@@ -1,0 +1,19 @@
+# Betriebssystem
+.DS_Store
+Thumbs.db
+
+# Editoren
+.vscode/
+.idea/
+*.swp
+
+# Temporäre Arbeitsdateien
+~$*
+*.tmp
+/tmp/
+
+# Vertrauliche Rohdaten (niemals committen: Kundendaten, Exporte, Angebote mit Preisen)
+/vertraulich/
+*_export.csv
+*_kundendaten*.csv
+*.xlsx
