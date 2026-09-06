@@ -10,7 +10,7 @@ mündliche Angaben. Ersetzt die bisherigen `ANNAHME`-Aussagen zum Bestandssystem
 | Kundenverwaltung, Verträge, Fakturierung | **Zoho Subscriptions** (heute unter dem Namen Zoho Billing geführt) | Kein Self-Storage-Fachsystem. Zum Einrichtungszeitpunkt die am besten passende verfügbare Lösung – die Grenzen sind heute erreicht |
 | Ergänzende Kundenverwaltung | Dateiablage in **OneDrive** | Parallelführung; soll mit der Umstellung entfallen (siehe Frage 2 im Benchmark) |
 | Buchhaltung | Steuerberatung mit **RZL** | Schnittstelle zu RZL ist die wichtigste Einzelanforderung |
-| Zahlungsabwicklung | ❓ zu klären: welcher Zahlungsdienstleister steht hinter Zoho (Stripe, GoCardless, Bankeinzug, Überweisung)? | bestimmt die Migrierbarkeit der Mandate |
+| Zahlungsabwicklung | **SEPA-Lastschrift über das eigene Bankkonto unter eigener Gläubiger-ID, ergänzt um Überweisungen; keine Kartenzahlung** (bestätigt 06.09.2026) | Mandate gehören deinPlatz und bleiben bei einem Softwarewechsel gültig |
 | Zutrittskontrolle | ❓ Hersteller/Modell zu erheben | bestimmt die Integrationsmöglichkeit |
 | Website | vorhanden (deinplatz.at) | Buchungsstrecke soll eingebunden, die Website nicht ersetzt werden |
 
@@ -33,6 +33,8 @@ Self-Storage-System. Daraus folgen die Lücken, die das neue System schließen s
 | Keine Buchungsstrecke auf der Website | Anfragen kommen telefonisch/per E-Mail, kein Abschluss außerhalb der Öffnungszeiten |
 | Keine branchenübliche Interessentenverfolgung | Anfragen können verloren gehen |
 | Buchhaltungsanbindung nicht auf RZL ausgerichtet | Übergabe an die Kanzlei aufwendig |
+| Keine automatische Rückmeldung von Zahlungen und Rückläufern | Zahlungsabgleich erfolgt überwiegend manuell – Hauptziel der Automatisierung |
+| Keine Kartenzahlung | Zahlungsarten für Neukunden eingeschränkt |
 
 ## 3. Anforderungsumfang laut Kundendokument
 
@@ -68,7 +70,7 @@ daher eine Frage der Einführungsreihenfolge, nicht des Produktumfangs – siehe
 | Adresse | vorhanden | Formatprüfung |
 | E-Mail | vorhanden | Voraussetzung für Portal und Rechnungsversand |
 | Telefonnummer | **teilweise** | Nacherfassung beim nächsten Kundenkontakt, kein Blocker |
-| **IBAN** | **fehlt** | **Kritisch** – siehe [`../50_umsetzung/migration_zoho.md`](../50_umsetzung/migration_zoho.md) |
+| **IBAN** | fehlt im Export | **kein Datenverlust** – vorhanden in Mandatsunterlagen und Electronic Banking, siehe [`../50_umsetzung/migration_zoho.md`](../50_umsetzung/migration_zoho.md) |
 | Offene Posten | vorhanden | Stichtagsgenau zu übernehmen |
 | Konto (Kundenkonto) | vorhanden | Saldo je Kunde |
 | Kontoauszug (Statement) | vorhanden | als Archiv |
@@ -89,7 +91,9 @@ Beantwortet in [`../30_markt/benchmark_kinnovis_stora.md`](../30_markt/benchmark
 
 ## 6. Was in Woche 1 zusätzlich zu erheben ist
 
-- [ ] Zahlungsdienstleister hinter Zoho, Eigentümer des Zahlungskontos, Gläubiger-ID vorhanden?
+- [x] Zahlungswege geklärt: SEPA über eigenes Bankkonto mit eigener Gläubiger-ID plus Überweisungen
+- [ ] Mandatsliste mit IBAN, Mandatsreferenz, Erteilungsdatum und letztem Einzug aufbauen
+- [ ] Anteil der Überweiser beziffern
 - [ ] Anzahl aktiver Verträge und Einheiten, Belegungsgrad
 - [ ] Hersteller und Modell der Zutrittsanlage
 - [ ] Vertragslaufzeit und Kündigungsfrist des Zoho-Abonnements

@@ -7,7 +7,9 @@ Stand: 06.09.2026 · Aktualisierung im wöchentlichen Jour fixe.
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | R01 | Datenqualität im Altsystem schlechter als erwartet (Dubletten, fehlende IBAN/SEPA-Mandate, unklare Vertragsstände) | 4 | 4 | 16 | Testexport bereits in Woche 1, Bereinigung parallel zur Auswahl, Bereinigungsverantwortliche benennen | Beratung | offen |
 | R02 | Entscheidung in Woche 5 verzögert sich | 3 | 5 | 15 | Entscheidungstermin fix im Kalender, Entscheidungsvorlage 3 Tage vorher, Rückfallebene definiert | PL | offen |
-| R03 | **SEPA-Mandate müssen bei rund 120 Kunden neu eingeholt werden** – im Zoho-Export fehlen die IBANs; Übernahme nur bei identischem Zahlungsdienstleister und identischer Gläubiger-ID möglich | 4 | 4 | **16** | Klärung in Woche 1 (O-05/O-06); bei Neueinholung sofortiger Start der Kundenaktion mit 3–4 Wochen Vorlauf; Überweisung als Übergangslösung | Finanzen | **offen, hohe Priorität** |
+| R03 | SEPA-Mandate müssen neu eingeholt werden | 2 | 4 | 8 | **Entschärft:** deinPlatz ist selbst Gläubiger mit eigener Gläubiger-ID, die Mandate bleiben gültig. Verbleibende Fälle: Mandate ohne Einzug in den letzten 36 Monaten und Verträge ohne Mandat | Finanzen | reduziert |
+| R16 | **Gläubiger-ID wird in Stripe falsch konfiguriert** – nach der ersten Live-Zahlung nicht mehr änderbar | 3 | 5 | **15** | Konfiguration mit eigener Gläubiger-ID vor der ersten Live-Zahlung schriftlich bestätigen lassen (O-10) | PL | offen |
+| R17 | Kein Kontoauszugsimport in beiden Systemen | 3 | 3 | 9 | In den Demos prüfen (O-11); Anteil der Überweiser durch Umstellungsaktion senken | Beratung | offen |
 | R04 | Zutrittskontrolle lässt sich nicht (oder nur teuer) anbinden | 3 | 3 | 9 | Hersteller/Modell in Woche 1 erheben, Integrationsfrage in RFP, manueller Betrieb als Übergangslösung akzeptiert | Beratung | offen |
 | R05 | Kein Anbieter erfüllt die österreichischen Anforderungen (USt., Belege, Steuerberatungs-Export) vollständig | 2 | 5 | 10 | K.o.-Kriterien früh prüfen, Alternative „Fachsystem + Buchhaltungs-/Kassensystem" als Kombination bewerten | Beratung | offen |
 | R06 | Kapazität im Kleinbetrieb: Tagesgeschäft blockiert Projektmitarbeit | 4 | 3 | 12 | Feste Zeitfenster (halbtags/Woche) reservieren, Aufgaben so weit möglich an Beratung/Anbieter auslagern | GF | offen |
@@ -23,8 +25,8 @@ Stand: 06.09.2026 · Aktualisierung im wöchentlichen Jour fixe.
 
 ## Top-3-Risiken zum Projektstart
 
-1. **R01/R03 Daten und Zahlungsmandate** – die fehlenden IBANs sind der längste Vorlauf im Projekt.
-   Klärung in Woche 1, nicht in Woche 6.
-2. **R13 RZL-Export** – die wichtigste Einzelanforderung des Kunden ist bei keinem Anbieter
-   nativ vorhanden; der Nachweis muss **vor** der Entscheidung erbracht werden.
+1. **R13 RZL-Export und R16 Gläubiger-ID** – beides sind Weichenstellungen, die vor dem Go-Live
+   unumkehrbar werden. Die Mandatslage selbst (R03) ist nach der Klärung vom 06.09.2026 entschärft.
+2. **R14 Einheitenzuordnung** – ohne verlässliche Zuordnung Kunde zu Lagerabteil ist keine
+   Migration möglich; Aufbau und Begehung in Woche 1.
 3. **R02 Entscheidungsverzug** – der 8-Wochen-Plan hat auf dem kritischen Pfad keinen Puffer.

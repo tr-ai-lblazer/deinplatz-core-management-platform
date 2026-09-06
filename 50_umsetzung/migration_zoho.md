@@ -3,50 +3,54 @@
 Ergänzt [`datenmigration.md`](datenmigration.md) um die Besonderheiten der Quelle.
 Ausgangslage: [`../10_analyse/ist_zustand_zoho.md`](../10_analyse/ist_zustand_zoho.md).
 
-## 1. Die eine Frage, die alles andere bestimmt
+## 1. Mandate und IBAN – Sachstand nach Klärung
 
-> **Können die bestehenden Lastschriftmandate übernommen werden – oder müssen sie bei rund
-> 120 Kundinnen und Kunden neu eingeholt werden?**
+**Ausgangslage (bestätigt durch den Auftraggeber, 06.09.2026):** Die Einzüge erfolgen heute als
+SEPA-Lastschrift über das **eigene Bankkonto** von deinPlatz, unter **eigener Gläubiger-ID**;
+ein Teil der Kunden zahlt per Überweisung. Die Konsolidierung in Zoho erfolgt weitgehend von Hand.
 
-Im Zoho-Export fehlen die IBANs. Das ist kein Fehler des Exports: In Zoho Subscriptions liegen
-Bankdaten in aller Regel **nicht** im Abrechnungssystem, sondern beim dahinterliegenden
-Zahlungsdienstleister. Zoho speichert nur eine Referenz.
+Damit entfällt das zuvor größte Migrationsrisiko: **deinPlatz ist selbst Gläubiger der Mandate.**
+Ein Mandat wird durch die Kombination aus Gläubiger-ID und Mandatsreferenz identifiziert; solange
+beide unverändert bleiben, bleibt es gültig – unabhängig davon, welche Software die Einzugsdatei
+erzeugt. Eine Neueinholung ist also **nicht** erforderlich, solange die Einzüge weiterhin unter
+derselben Gläubiger-ID laufen.
 
-Daraus folgen drei Szenarien:
+Die fehlende IBAN ist kein Datenverlust, sondern eine Beschaffungsaufgabe: Sie steht in den
+Mandatsunterlagen und im Electronic Banking der Hausbank.
 
-| Szenario | Voraussetzung | Aufwand | Wahrscheinlichkeit |
-| --- | --- | --- | --- |
-| **S1 – Mandate wandern mit** | Zahlungsdienstleister bleibt derselbe (z. B. Stripe), das Zahlungskonto gehört **deinPlatz** (nicht Zoho), die Mandate liegen als PaymentMethod vor und die **Gläubiger-ID bleibt identisch** | gering: technische Übertragung, keine Kundenaktion | zu prüfen |
-| **S2 – Mandate müssen neu eingeholt werden** | Wechsel des Dienstleisters, Mandate nur als veraltetes Objekt gespeichert, oder abweichende Gläubiger-ID | **hoch**: Kundenkommunikation, Rücklauf, Nachfassen, 3–4 Wochen Vorlauf | zu prüfen |
-| **S3 – heute gar keine Lastschrift** | Zahlung heute per Überweisung/Karte | Lastschrift ist dann eine **Neueinführung**, kein Migrationsthema – mit demselben Vorlauf | zu prüfen |
+### Was daraus für die Zielsysteme folgt
 
-**Belegte technische Randbedingung:** Ein Übertrag gespeicherter SEPA-Zahlungsmittel zwischen
-Stripe-Konten ist möglich, aber nur für als *PaymentMethod* gespeicherte Mandate und nur, wenn
-**Gläubiger-ID von Quell- und Zielkonto übereinstimmen**; Mandate von einem anderen Anbieter
-lassen sich grundsätzlich zu Stripe portieren. Beides ist beim Anbieter und bei Stripe
-schriftlich zu bestätigen – nicht auf Zuruf.
+| Zielmodell | Wirkung auf die Mandate | Voraussetzung im System |
+| --- | --- | --- |
+| **A – Einzug über die eigene Bank** | bleiben unverändert gültig, keine Kundenaktion | SEPA-Einzugsdatei (pain.008) erzeugbar – belegt nur bei Kinnovis (ABR-15) |
+| **B – Einzug über Stripe mit eigener Gläubiger-ID** | Bestandsmandate werden zu Stripe portiert, keine Kundenaktion | **Die eigene Gläubiger-ID muss vor der ersten Live-Zahlung in Stripe hinterlegt werden – danach ist sie nicht mehr änderbar** |
+| **B – Einzug über Stripe mit Stripe-Gläubiger-ID** | neue Mandate bei allen Kunden erforderlich | vermeidbar, siehe oben – dieser Fall darf nicht versehentlich eintreten |
+| **C – Hybrid (Empfehlung)** | Bestand bleibt bei der Bank, Neukunden über Stripe | System muss beide Wege parallel führen (ABR-17) |
 
-### Zu klären in Woche 1 (Reihenfolge)
+### Aufgaben in Woche 1
 
-1. Welcher Zahlungsdienstleister steht heute hinter Zoho?
-2. Wem gehört das Konto beim Dienstleister – deinPlatz oder Zoho?
-3. Gibt es eine eigene SEPA-Gläubiger-ID (Creditor Identifier)? Welche?
-4. Wie viele aktive Verträge zahlen per Lastschrift, wie viele per Überweisung/Karte?
-5. Bestätigung des Zielanbieters (Kinnovis/Stora), ob und wie er übernommene Mandate einbindet.
+1. **Mandatsliste aufbauen**: Kunde, IBAN, Mandatsreferenz, Datum der Erteilung, Datum des
+   letzten erfolgreichen Einzugs – aus Mandatsunterlagen und Electronic Banking.
+2. Gläubiger-ID dokumentieren; prüfen, ob mehrere im Einsatz sind.
+3. Verträge **ohne** gültiges Mandat identifizieren – nur hier ist eine Neueinholung nötig.
+4. Mandate prüfen, deren letzter Einzug mehr als **36 Monate** zurückliegt: Diese sind verfallen
+   und müssen neu erteilt werden.
+5. Liste der Überweiser erstellen – Zielgruppe der Umstellungsaktion (Abschnitt 1a).
 
-### Wenn S2 oder S3 eintritt: Ablauf Mandatsneueinholung
+## 1a. Umstellung der Überweiser auf Lastschrift
 
-| Woche | Schritt |
-| --- | --- |
-| 1 | Entscheidung, Text und Formular/Online-Strecke vorbereiten (Rechtsprüfung des Mandatstexts) |
-| 2 | Anschreiben an alle aktiven Kunden mit Frist und klarem Nutzen; digitale Erfassung bevorzugen |
-| 3 | Erinnerung an alle ohne Rücklauf |
-| 4 | Telefonisches Nachfassen; Restliche zunächst auf Überweisung stellen |
-| ab Go-Live | Nacherfassung beim nächsten Kundenkontakt vor Ort |
+Unabhängig vom gewählten System und Modell ist dies die wirksamste Einzelmaßnahme gegen den
+manuellen Aufwand: Jeder Wechsel von Überweisung auf Lastschrift entfernt einen manuellen
+Abgleich pro Monat. Reine Überweisungen bleiben in beiden Shortlist-Systemen Handarbeit, solange
+kein Kontoauszugsimport besteht (Anforderung BUH-04).
 
-Erfahrungswert: Der Rücklauf liegt nach dem ersten Anschreiben meist bei etwa der Hälfte, nach
-Erinnerung und Telefonaten bei 80–90 %. Ein Rest zahlt dauerhaft per Überweisung – dafür braucht
-es einen sauberen Prozess für den Zahlungsabgleich (Anforderung BUH-04).
+| Schritt | Maßnahme | Erfahrungswert |
+| --- | --- | --- |
+| 1 | Liste der Überweiser aus Zoho-Export und Kontoauszug | – |
+| 2 | Anschreiben mit einfachem Weg zur Mandatserteilung (digital bevorzugt) | rund die Hälfte reagiert |
+| 3 | Erinnerung nach zwei Wochen | – |
+| 4 | Telefonisches Nachfassen | hebt die Quote auf 80–90 % |
+| 5 | Rest bei Überweisung belassen, sauberer manueller Prozess | – |
 
 ## 2. Exportfähigkeit von Zoho
 
@@ -97,7 +101,7 @@ Preisliste je Größenklasse.
 | Payment | Zahlung | nur soweit für offene Posten nötig |
 | Credit Note | Gutschrift/Guthaben | Guthaben müssen im Zielsystem sichtbar bleiben |
 | Kaution | Kaution | in Zoho oft als normale Rechnung erfasst → **manuelle Liste erforderlich** |
-| Zahlungsmittel/Mandat | Zahlungsart | siehe Abschnitt 1 |
+| Zahlungsmittel/Mandat | Zahlungsart und Mandat | Quelle ist **nicht** Zoho, sondern die Mandatsunterlagen und das Electronic Banking – siehe Abschnitt 1 |
 
 ## 5. Kautionen – gesonderte Behandlung
 
@@ -135,14 +139,14 @@ Ergänzend zu den Kriterien in [`datenmigration.md`](datenmigration.md):
 ## 8. Reihenfolge der Arbeitspakete
 
 ```
-W1  Exporte anfordern · Zahlungsdienstleister klären · Einheitenliste aufbauen
-W2  Datenqualität bewerten · Entscheidung Mandate (S1/S2/S3) · ggf. Kundenanschreiben vorbereiten
-W3  Bereinigung · Begehung/Abgleich vor Ort · ggf. Mandatsaktion starten
+W1  Exporte anfordern · Mandatsliste aus Bank und Unterlagen aufbauen · Einheitenliste aufbauen
+W2  Datenqualität bewerten · Betriebsmodell festlegen (A/B/C) · Anschreiben für Überweiser vorbereiten
+W3  Bereinigung · Begehung/Abgleich vor Ort · Umstellungsaktion Überweiser starten
 W4  Mapping mit dem favorisierten Anbieter abstimmen (Importvorlagen)
 W6  Testlauf 1 · Abgleich
 W7  Testlauf 2 mit aktuellem Stand · Abgleich · Freigabe
 W8  Produktive Migration · Cutover
 ```
 
-Die Mandatsklärung (Abschnitt 1) ist der einzige Strang, der **nicht** auf die Anbieterentscheidung
-warten kann. Er startet in Woche 1.
+Die Mandatsliste (Abschnitt 1) und die Einheitenliste (Abschnitt 3) sind die einzigen Stränge, die
+**nicht** auf die Anbieterentscheidung warten können. Beide starten in Woche 1.

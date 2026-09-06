@@ -12,7 +12,8 @@ revidierte Entscheidungen werden als „ersetzt durch E-xx" markiert.
 | E-04 | 06.09.2026 | Shortlist | Die Auswahl wird auf **Kinnovis** und **Stora** eingegrenzt | Vorgabe des Auftraggebers; beide sind Fachsysteme mit europäischer Ausrichtung | Auftraggeber | gültig |
 | E-05 | 06.09.2026 | Umfang Go-Live | Phasung laut Kundendokument: Phase 1 = RZL-Schnittstelle, Online-Vertrag inkl. Identitätsprüfung, monatliche Fakturierung, wählbare Zahlungsart, Website-Einbindung, automatisierte E-Mails; Phase 2 = Buchungsportal, Kundenportal, Anlageplan | Fokus auf den Kernbetrieb, Portale nach Stabilisierung | Auftraggeber | gültig |
 | E-06 | 06.09.2026 | Buchhaltungsformat | Zielformat ist **RZL** (Steuerberatung); DATEV-CSV gilt als zulässiger Zwischenweg, sofern der Import in RZL nachgewiesen ist | RZL ist gesetzt, Anbieter liefern kein natives RZL-Format | Auftraggeber / Beratung | gültig |
-| E-07 | 06.09.2026 | Zahlungsstrategie (Empfehlung) | SEPA-Lastschrift als Standardzahlungsart, Karte als Ausweichoption | Kostenwirkung: bei Kartendominanz übersteigen die Zahlungsentgelte die Softwarekosten (Benchmark, Abschnitt 6.2) | Beratung (Vorschlag), GF offen | vorläufig |
+| E-07 | 06.09.2026 | Zahlungsstrategie (Empfehlung) | SEPA-Lastschrift als Standardzahlungsart, Karte als Ausweichoption | Kostenwirkung: bei Kartendominanz übersteigen die Zahlungsentgelte die Softwarekosten | Beratung (Vorschlag), GF offen | vorläufig |
+| E-08 | 06.09.2026 | Betriebsmodell Zahlungsabwicklung (Empfehlung) | **Hybrid:** Bestand weiter über die eigene Bank (SEPA-XML, eigene Gläubiger-ID), Neuverträge und Online-Buchungen über Stripe | Bestandsmandate bleiben unverändert gültig, Automatisierungsgrad wächst ohne Umstellungsaktion; setzt SEPA-XML-Export voraus (ABR-15) | Beratung (Vorschlag), GF offen | vorläufig |
 
 ## Offene Entscheidungen (Entscheidungsbedarf)
 
@@ -22,8 +23,10 @@ revidierte Entscheidungen werden als „ersetzt durch E-xx" markiert.
 | O-02 | ~~Buchungsstrecke zum Go-Live?~~ **Beantwortet:** Phase 2 (E-05) | – | erledigt |
 | O-03 | ~~Exportformat der Steuerberatung?~~ **Beantwortet:** RZL (E-06). Offen bleibt der **Nachweis des Importwegs** – Musterexport beider Anbieter testweise in RZL importieren | vor der Entscheidung | Steuerberatung |
 | O-04 | Bleiben Barzahlungen am Standort möglich? (bestimmt Registrierkassen-Thematik) | Ende W2 | GF + Steuerberatung |
-| O-05 | Welcher Zahlungsdienstleister steht heute hinter Zoho, wem gehört das Konto, gibt es eine eigene SEPA-Gläubiger-ID? | **Woche 1** | PL |
-| O-06 | Können die bestehenden Mandate übernommen werden oder müssen sie neu eingeholt werden? (IBAN fehlt im Zoho-Export) | **Woche 1–2** | GF + Zahlungsdienstleister |
+| O-05 | ~~Zahlungsdienstleister und Gläubiger-ID?~~ **Beantwortet:** SEPA über eigenes Bankkonto mit eigener Gläubiger-ID plus Überweisungen | – | erledigt |
+| O-06 | ~~Mandate übernehmbar?~~ **Weitgehend beantwortet:** deinPlatz ist selbst Gläubiger, die Mandate bleiben gültig. Offen bleibt die Beschaffung von IBAN und Mandatsreferenz aus den eigenen Unterlagen | Woche 1 | Finanzen |
+| O-10 | Wird Stripe eingesetzt: eigene oder Stripe-Gläubiger-ID? Die Entscheidung ist nach der ersten Live-Zahlung **nicht mehr änderbar** | vor Go-Live | GF + Anbieter |
+| O-11 | Bietet eines der beiden Systeme einen Kontoauszugsimport (CAMT.053/MT940)? Davon hängt ab, ob Überweisungen automatisiert abgeglichen werden können | Demos | Beratung |
 | O-08 | Wo ist die Zuordnung Kunde ↔ Lagerabteil heute dokumentiert, und stimmt sie mit der Realität überein? | Woche 1 | Fachverantwortung Betrieb |
 | O-09 | Wird die Ausweiskopie dauerhaft gespeichert – und mit welcher Rechtsgrundlage? | Ende W2 | GF + Rechtsberatung |
 | O-07 | Budgetrahmen verbindlich | Ende W2 | GF |

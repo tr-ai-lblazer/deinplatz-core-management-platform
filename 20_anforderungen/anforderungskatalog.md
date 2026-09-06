@@ -127,6 +127,9 @@ und hier liegt das größte Fehlerrisiko bei der Migration (Stichtage, offene Po
 | ABR-12 | E-Rechnung im strukturierten Format (ebInterface/Peppol) fuer Firmenkunden und oeffentliche Auftraggeber | Kann | 2 | – | Welche E-Rechnungsformate werden unterstuetzt? |
 | ABR-13 | Selektiver Rechnungslauf (Auswahl einzelner Vertraege oder Gruppen) zusaetzlich zum Gesamtlauf | Soll | 1 | – | Wie waehlt man einzelne Vertraege fuer einen Lauf aus? |
 | ABR-14 | Zahlungsart je Vertrag frei waehlbar (SEPA-Lastschrift, Karte, Ueberweisung) und durch den Kunden aenderbar | Muss | 1 | **ja** | Wie wechselt eine Kundin oder ein Kunde die Zahlungsart? |
+| ABR-15 | SEPA-Einzugsdatei (pain.008) fuer den Upload in das eigene Electronic Banking erzeugen | Muss | 1 | **ja** | Erzeugt das System eine Einzugsdatei fuer unsere Hausbank unter unserer Glaeubiger-ID? |
+| ABR-16 | Import bestehender SEPA-Mandate inkl. IBAN, Mandatsreferenz und Erteilungsdatum | Muss | 1 | **ja** | Koennen wir unsere bestehenden Mandate importieren, ohne sie neu einzuholen? |
+| ABR-17 | Bestandskunden und Neukunden koennen dauerhaft unterschiedliche Zahlungswege nutzen (Bank und Zahlungsdienstleister parallel) | Soll | 1 | – | Laufen Bank-Lastschrift und Dienstleister-Einzug dauerhaft parallel? |
 <!-- ENDE -->
 
 ## 7. Mahnwesen (MAH)
@@ -161,7 +164,7 @@ ob ZUT-01/ZUT-02 zum Go-Live oder erst in Phase 2 realisierbar sind.
 | BUH-01 | Export der Buchungsdaten in einem fuer RZL importierbaren Format (RZL-CSV oder DATEV-CSV) | Muss | 1 | **ja** | Bitte Musterexport eines Monats liefern; ist das Format inkl. Konten und Steuerschluesseln konfigurierbar? |
 | BUH-02 | Konten- und Steuerschluesselzuordnung konfigurierbar | Muss | 1 | – | Wie werden Erloeskonten je Leistungsart zugeordnet? |
 | BUH-03 | Unveraenderbarkeit und Nachvollziehbarkeit der Belege (keine stille Aenderung nach Versand) | Muss | 1 | **ja** | Wie wird eine bereits versendete Rechnung technisch geschuetzt? |
-| BUH-04 | Bankkontoabgleich (CAMT/MT940-Import oder Provider-Abgleich) | Soll | 1 | – | Wie kommen Ueberweisungen ins System? |
+| BUH-04 | Import des Bankkontoauszugs (CAMT.053 oder MT940) mit automatischer Zuordnung der Zahlungen | Muss | 1 | – | Kann ein Kontoauszug eingelesen und automatisch zugeordnet werden? |
 | BUH-05 | Aufloesung von Sammelauszahlungen des Zahlungsdienstleisters (Payouts) inklusive Gebuehren fuer die Buchhaltung | Muss | 1 | – | Wie werden Payouts und Gebuehren im Buchhaltungsexport dargestellt? |
 <!-- ENDE -->
 
@@ -213,4 +216,5 @@ dokumentiert.
 | Version | Datum | Änderung | Autor |
 | --- | --- | --- | --- |
 | 0.1 | 06.09.2026 | Erstentwurf auf Basis Marktrecherche und Branchenstandard | Beratung |
+| 0.3 | 06.09.2026 | Zahlungswege praezisiert: ABR-15 (SEPA-XML), ABR-16 (Mandatsimport), ABR-17 (parallele Zahlungswege) neu; BUH-04 auf „Muss" gehoben | Beratung |
 | 0.2 | 06.09.2026 | Kundendokument eingearbeitet: Phasenspalte, RZL in BUH-01, neue Anforderungen OBJ-06, BUC-05, VER-07, VER-08, ABR-13, ABR-14, BUH-05; ABR-05 auf „Muss" gehoben | Beratung |

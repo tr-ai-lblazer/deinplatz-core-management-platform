@@ -42,6 +42,9 @@ ABR-11;Abrechnung & Zahlung;Zusatzleistungen (Versicherung, Schloss, Kartons, Pa
 ABR-12;Abrechnung & Zahlung;E-Rechnung im strukturierten Format (ebInterface/Peppol) fuer Firmenkunden und oeffentliche Auftraggeber;Kann;nein;Welche E-Rechnungsformate werden unterstuetzt?;2
 ABR-13;Abrechnung & Zahlung;Selektiver Rechnungslauf (Auswahl einzelner Vertraege oder Gruppen) zusaetzlich zum Gesamtlauf;Soll;nein;Wie waehlt man einzelne Vertraege fuer einen Lauf aus?;1
 ABR-14;Abrechnung & Zahlung;Zahlungsart je Vertrag frei waehlbar (SEPA-Lastschrift, Karte, Ueberweisung) und durch den Kunden aenderbar;Muss;ja;Wie wechselt eine Kundin oder ein Kunde die Zahlungsart?;1
+ABR-15;Abrechnung & Zahlung;SEPA-Einzugsdatei (pain.008) fuer den Upload in das eigene Electronic Banking erzeugen;Muss;ja;Erzeugt das System eine Einzugsdatei fuer unsere Hausbank unter unserer Glaeubiger-ID?;1
+ABR-16;Abrechnung & Zahlung;Import bestehender SEPA-Mandate inkl. IBAN, Mandatsreferenz und Erteilungsdatum;Muss;ja;Koennen wir unsere bestehenden Mandate importieren, ohne sie neu einzuholen?;1
+ABR-17;Abrechnung & Zahlung;Bestandskunden und Neukunden koennen dauerhaft unterschiedliche Zahlungswege nutzen (Bank und Zahlungsdienstleister parallel);Soll;nein;Laufen Bank-Lastschrift und Dienstleister-Einzug dauerhaft parallel?;1
 MAH-01;Mahnwesen;Regelbasierte Mahnstufen mit Fristen, Textvorlagen und automatischem Versand;Muss;ja;Bitte den konfigurierten Mahnlauf zeigen.;1
 MAH-02;Mahnwesen;Mahnspesen und Verzugszinsen automatisch berechnen;Soll;nein;Wie werden Mahnspesen hinterlegt?;1
 MAH-03;Mahnwesen;Automatische Zutrittssperre ab definierter Mahnstufe (ueber Zutrittsschnittstelle);Soll;nein;Wie wird die Sperre technisch ausgeloest und wieder aufgehoben?;2
@@ -52,7 +55,7 @@ ZUT-03;Zutrittskontrolle;Zutrittsprotokoll im System einsehbar und auswertbar;Ka
 BUH-01;Buchhaltung;Export der Buchungsdaten in einem fuer RZL importierbaren Format (RZL-CSV oder DATEV-CSV);Muss;ja;"Bitte Musterexport eines Monats liefern; ist das Format inkl. Konten und Steuerschluesseln konfigurierbar?";1
 BUH-02;Buchhaltung;Konten- und Steuerschluesselzuordnung konfigurierbar;Muss;nein;Wie werden Erloeskonten je Leistungsart zugeordnet?;1
 BUH-03;Buchhaltung;Unveraenderbarkeit und Nachvollziehbarkeit der Belege (keine stille Aenderung nach Versand);Muss;ja;Wie wird eine bereits versendete Rechnung technisch geschuetzt?;1
-BUH-04;Buchhaltung;Bankkontoabgleich (CAMT/MT940-Import oder Provider-Abgleich);Soll;nein;Wie kommen Ueberweisungen ins System?;1
+BUH-04;Buchhaltung;Import des Bankkontoauszugs (CAMT.053 oder MT940) mit automatischer Zuordnung der Zahlungen;Muss;nein;Kann ein Kontoauszug eingelesen und automatisch zugeordnet werden?;1
 BUH-05;Buchhaltung;Aufloesung von Sammelauszahlungen des Zahlungsdienstleisters (Payouts) inklusive Gebuehren fuer die Buchhaltung;Muss;nein;Wie werden Payouts und Gebuehren im Buchhaltungsexport dargestellt?;1
 REP-01;Reporting;Standardberichte: Belegungsgrad, Umsatz je m2, Neuzugaenge/Kuendigungen, Aussenstaende;Muss;nein;Welche Berichte gibt es ohne Zusatzkosten?;1
 REP-02;Reporting;Export aller Berichte nach Excel/CSV;Muss;nein;Bitte Export live zeigen.;1

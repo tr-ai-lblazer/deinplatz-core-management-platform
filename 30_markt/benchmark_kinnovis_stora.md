@@ -1,6 +1,10 @@
 # Benchmark: Kinnovis vs. Stora
 
 Stand: 06.09.2026 · Bezug: Anforderungsdokument „Umstellung Software deinPlatz v1" (Phase 1/2)
+
+> **Ergänzender Report:** Die Zahlungsabwicklung ist in einem eigenen Report für die
+> Geschäftsführung vertieft: [`benchmark_kinnovis_stora_zahlungsabwicklung.docx`](benchmark_kinnovis_stora_zahlungsabwicklung.docx)
+> – Betriebsmodelle, Einbindung der Bestandskunden, Automatisierungsgrad und Kosten.
 Quellen: [`../90_quellen/recherchequellen.md`](../90_quellen/recherchequellen.md)
 
 ## 0. Auf einen Blick
@@ -123,11 +127,28 @@ Projektrisiko – **aber es muss vor der Entscheidung geklärt sein.**
 die einzige belastbare Prüfung. Ein „ja, wir haben eine Buchhaltungsschnittstelle" im
 Vertriebsgespräch ist keine.
 
-### 6.2 Zahlungen: Stripe-Abhängigkeit und Kostenwirkung
+### 6.2 Zahlungen: Betriebsmodell, Mandate und Kostenwirkung
 
-Beide Systeme setzen auf Stripe. Der Unterschied: Kinnovis bietet zusätzlich einen
-**SEPA-Lastschrift-XML-Export**, mit dem der Einzug über die Hausbank läuft – ohne
-Transaktionsentgelt eines Dienstleisters.
+**Ist-Zustand (bestätigt 06.09.2026):** SEPA-Lastschrift über das **eigene Bankkonto** unter
+**eigener Gläubiger-ID**, ergänzt um Überweisungen; der Abgleich erfolgt weitgehend manuell.
+
+Damit ist die entscheidende Frage nicht „Stripe ja oder nein", sondern welches Betriebsmodell
+gefahren wird:
+
+| Modell | Einzug durch | Mandate | Verfügbar bei |
+| --- | --- | --- | --- |
+| **A – eigene Bank** | Hausbank über SEPA-Datei (pain.008) aus dem System | bleiben unverändert gültig | Kinnovis (SEPA-XML-Export belegt); Stora: nicht vorgesehen |
+| **B – Stripe** | Stripe, mit voller Rückmeldung ins System | portierbar, **wenn** die eigene Gläubiger-ID vor der ersten Live-Zahlung hinterlegt wird | Kinnovis und Stora |
+| **C – Hybrid (Empfehlung)** | Bestand über die Bank, Neuverträge über Stripe | keine Kundenaktion nötig | nur mit SEPA-XML, also Kinnovis |
+
+**Kritischer Konfigurationspunkt:** Bei Stripe ist die Gläubiger-ID **nach der ersten Live-Zahlung
+nicht mehr änderbar** ✅. Wird versehentlich die Stripe-Gläubiger-ID verwendet, müssen alle Mandate
+neu eingeholt werden.
+
+**Überweisungen:** Für Stora ist belegt, dass Zahlungen mit manueller Zahlungsart (Überweisung,
+Bar, Scheck) im System **von Hand als bezahlt markiert** werden ✅ – für diesen Teil der Kunden
+entsteht kein Automatisierungsgewinn. Ob eines der Systeme einen Kontoauszug (CAMT.053/MT940)
+einlesen kann, ist bei beiden offen ❓ und in den Demos zu klären (Anforderung BUH-04).
 
 Rechenbeispiel (`ANNAHME`: 120 aktive Verträge, Ø 100 € Monatsmiete, 12.000 € Monatsumsatz;
 Stripe-Listenpreise Österreich: europäische Karten 1,5 % + 0,25 €, SEPA-Lastschrift 0,35 € pauschal ✅):
@@ -201,11 +222,12 @@ Für den Anbietervergleich zählt:
 | Kautionen | ❓ eigenes Feld/Position nötig | ❓ |
 | Rechnungshistorie | Archivweg klären ❓ | Archivweg klären ❓ |
 
-**Der kritische Punkt ist identisch für beide Anbieter:** In Ihrem Zoho-Export fehlen die IBANs.
-Die Zahlungsdaten liegen nicht in Zoho, sondern beim Zahlungsdienstleister dahinter. Ob die
-Mandate mitgenommen werden können oder von rund 120 Kundinnen und Kunden neu eingeholt werden
-müssen, entscheidet über mehrere Wochen Projektaufwand und über die Kundenkommunikation.
-**Diese Frage gehört in Woche 1 geklärt, nicht in Woche 6.**
+**Nachtrag zur Mandatsfrage (geklärt am 06.09.2026):** Da die Einzüge über das eigene Bankkonto
+unter eigener Gläubiger-ID laufen, ist deinPlatz selbst Gläubiger der Mandate. Sie bleiben bei
+einem Softwarewechsel gültig; eine Neueinholung ist nicht erforderlich. Die im Zoho-Export
+fehlenden IBANs sind aus den Mandatsunterlagen und dem Electronic Banking zu beschaffen.
+Zu prüfen bleiben Mandate ohne Einzug in den letzten 36 Monaten (Verfall) sowie Verträge ohne
+gültiges Mandat. Details: [`../50_umsetzung/migration_zoho.md`](../50_umsetzung/migration_zoho.md).
 
 ## 9. Antworten auf Ihre sechs Fragen
 
@@ -308,7 +330,9 @@ Diese Fragen entscheiden – nicht der Funktionsumfang. Bitte in dieser Reihenfo
 | F1 | Bitte einen echten Buchhaltungsexport eines Monats erzeugen und die Datei zeigen. Ist das Format konfigurierbar (Konten, Steuerschlüssel, österreichischer Kontenrahmen)? | RZL-Tauglichkeit ist Ihr wichtigstes Kriterium |
 | F2 | Bitte eine Musterrechnung für einen österreichischen Firmenkunden zeigen – mit UID, USt.-Ausweis, fortlaufender Nummer. | § 11 UStG |
 | F3 | Sind Vertrag, Rechnung, Mahnung und alle Kunden-E-Mails auf Deutsch und von uns selbst änderbar? Bitte einen Text live ändern. | Sprache ist K.o. |
-| F4 | Wie kommen unsere bestehenden Zahlungsdaten aus Zoho/Stripe in Ihr System? Müssen 120 SEPA-Mandate neu eingeholt werden? | größtes Migrationsrisiko |
+| F4 | Können wir unter **unserer eigenen Gläubiger-ID** einziehen, und können wir die bestehenden Mandate mit IBAN, Referenz und Erteilungsdatum importieren? | Erhalt der Bestandsmandate |
+| F4b | Erzeugt das System eine SEPA-Einzugsdatei (pain.008) für unser Electronic Banking, und können Bank- und Stripe-Einzug dauerhaft parallel laufen? | Voraussetzung für Modell A und C |
+| F4c | Kann ein Bankkontoauszug (CAMT.053/MT940) eingelesen und automatisch zugeordnet werden? | einziger Weg, Überweisungen zu automatisieren |
 | F5 | Wie werden Kautionen abgebildet – als Erlös oder als durchlaufender Posten? | steuerlich relevant |
 | F6 | Bitte eine Kündigung mit Frist inklusive Rückgabeprozess vorführen (siehe 9.5). | Ihre Frage 5 |
 | F7 | Wie wird ein telefonischer Interessent erfasst und nachverfolgt? | Ihre Frage 4 |
@@ -325,6 +349,7 @@ Punkte 0–5 je Kriterium, gewichtet nach [`bewertungsmodell.md`](bewertungsmode
 
 | Kriterium | Gewicht | Kinnovis | Stora | Begründung |
 | --- | --- | --- | --- | --- |
+| Zahlungswege und Mandatserhalt | **hoch** | 5 | 3 | SEPA-XML erhält Bestandsmandate ohne Kundenaktion; Stora erfordert die Umstellung auf Stripe |
 | Funktionale Abdeckung Phase 1 | hoch | 4 | 4 | beide decken den Kern ab |
 | Funktionale Abdeckung Phase 2 | mittel | 4 | 4 | beide im Standard |
 | Buchhaltung/RZL | **hoch** | 4 | 2 | DATEV-Report vs. nur Xero |
