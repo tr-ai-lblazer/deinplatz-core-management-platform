@@ -37,7 +37,8 @@ realistisch (siehe [Projektauftrag](00_management/projektauftrag.md), Abschnitt 
 | Anforderungskatalog | ✅ Version 0.2 mit Phasen 1/2 aus dem Kundendokument, Freigabe Woche 2 |
 | Shortlist | ✅ Kinnovis und Stora, Benchmark liegt vor ([`30_markt/benchmark_kinnovis_stora.md`](30_markt/benchmark_kinnovis_stora.md)) |
 | Migrationskonzept Zoho | ✅ Entwurf ([`50_umsetzung/migration_zoho.md`](50_umsetzung/migration_zoho.md)); Mandatsfrage offen |
-| Anbieterentscheidung | ⬜ nach den Demos, geplant Ende Woche 5 |
+| Projektplan mit Terminen | ✅ Go-Live **Fr 30.10.2026**, Word-Fassung in [`00_management/projektplan_umstellung_kernsystem.docx`](00_management/projektplan_umstellung_kernsystem.docx) |
+| Anbieterentscheidung | ⬜ **spätestens Fr 09.10.2026** (Meilenstein M5) |
 | Go-Live | ⬜ geplant Woche 8 |
 
 ## Wichtiger Hinweis zu den Annahmen

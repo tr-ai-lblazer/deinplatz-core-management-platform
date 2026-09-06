@@ -1,6 +1,27 @@
 # 8-Wochen-Plan: Auswahl und Einführung
 
-Stand: 06.09.2026 · Version 0.1 · KW-Bezug wird beim Kick-off fixiert.
+Stand: 06.09.2026 · Version 0.2 · **Termine fixiert: Projektstart Mo 07.09.2026, Go-Live Fr 30.10.2026**
+
+> **Ausführliche Fassung für die Geschäftsführung:** [`projektplan_umstellung_kernsystem.docx`](projektplan_umstellung_kernsystem.docx)
+> – mit Meilensteinen samt spätesten Terminen, kritischem Pfad, Balkenplan, Rückwärtsrechnung,
+> Ressourcen, Rückfallebenen und Cutover-Tagesplan.
+
+## Kalenderzuordnung
+
+| Woche | Kalenderwoche | Zeitraum | Meilenstein am Freitag |
+| --- | --- | --- | --- |
+| W1 | KW 37 | 07.–11.09.2026 | M1 Ist-Bild und Projektauftrag |
+| W2 | KW 38 | 14.–18.09.2026 | M2 Anforderungen freigegeben, Anbieter angefragt |
+| W3 | KW 39 | 21.–25.09.2026 | M3 Demos und RZL-Testimport |
+| W4 | KW 40 | 28.09.–02.10.2026 | M4 Angebote bewertet |
+| W5 | KW 41 | 05.–09.10.2026 | **M5 Anbieter beauftragt – kritischster Termin** |
+| W6 | KW 42 | 12.–16.10.2026 | M6 Konfiguration und Migrationstest 1 |
+| W7 | KW 43 | 19.–23.10.2026 | M7 Abnahme und Go-/No-Go |
+| W8 | KW 44 | 26.–30.10.2026 | M8 Go-Live |
+
+**Kalenderbesonderheit:** Montag, 26.10.2026 ist Nationalfeiertag – die Cutover-Woche hat nur
+vier Arbeitstage. Der Cutover läuft daher Di 27.10. (Migration), Mi 28.10. (Go-Live),
+Do 29.10. (Abrechnungslauf November), Fr 30.10. (Zahlungslauf und Hypercare).
 
 ## Phasenlogik
 
@@ -115,7 +136,11 @@ vorreservieren.
 
 ## Rückfallebene
 
-Wenn M5 nicht bis Ende Woche 5 erreicht wird, wird der Umfang für den Go-Live reduziert:
+Drei abgestufte Stufen, ausführlich in der Word-Fassung (Kapitel 12): Umfang reduzieren und
+Termin halten · Cutover auf den Monatswechsel November/Dezember verschieben (Go-Live 25.11.) ·
+Abrechnung eines Monats übergangsweise getrennt führen.
+
+Wenn M5 nicht bis Ende Woche 5 (Fr 09.10.) erreicht wird, wird der Umfang für den Go-Live reduziert:
 Zuerst gehen Kundenstamm, Verträge und Abrechnung produktiv; Online-Buchungsstrecke,
 Zutrittskontroll-Integration und Reporting folgen in einer zweiten Welle
 (Wochen 9–12). Diese Entscheidung trifft die Geschäftsführung, sie wird im Entscheidungslog dokumentiert.
