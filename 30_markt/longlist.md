@@ -52,7 +52,16 @@ Sie bleiben als Reserve, falls die Rückläufer zu dünn sind.
 
 **Ergebnis:** ⬜ Shortlist · ⬜ ausgeschieden – Begründung: ______________________
 
-## Screening-Ergebnis (wird in Woche 3 ausgefüllt)
+## Screening-Ergebnis
+
+**Stand 06.09.2026:** Der Auftraggeber hat die Auswahl auf **Kinnovis** und **Stora** eingegrenzt
+(Entscheidung E-04). Der Produktvergleich der beiden liegt vor:
+[`benchmark_kinnovis_stora.md`](benchmark_kinnovis_stora.md).
+Die übrigen Kandidaten bleiben dokumentiert – falls beide Shortlist-Anbieter an den
+österreichischen K.o.-Kriterien scheitern (Rechnungslogik, RZL-Export, deutschsprachige
+Kundendokumente), ist Weg B aus `anbieter.csv` der nächste Prüfschritt.
+
+## Screening-Detail (K.o.-Prüfung in den Demos)
 
 | Anbieter | K.o. erfüllt | Shortlist | Begründung |
 | --- | --- | --- | --- |

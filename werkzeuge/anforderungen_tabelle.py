@@ -22,13 +22,14 @@ def lade_anforderungen():
 
 
 def tabelle(zeilen):
-    kopf = "| ID | Anforderung | Prioritaet | K.o. | Prueffrage an den Anbieter |\n"
-    kopf += "| --- | --- | --- | --- | --- |\n"
+    kopf = "| ID | Anforderung | Prioritaet | Phase | K.o. | Prueffrage an den Anbieter |\n"
+    kopf += "| --- | --- | --- | --- | --- | --- |\n"
     zellen = []
     for z in zeilen:
         ko = "**ja**" if z["KO"].strip().lower() == "ja" else "–"
         zellen.append(
-            f'| {z["ID"]} | {z["Anforderung"]} | {z["Prioritaet"]} | {ko} | {z["Prueffrage an den Anbieter"]} |'
+            f'| {z["ID"]} | {z["Anforderung"]} | {z["Prioritaet"]} | {z.get("Phase", "")} | {ko} '
+            f'| {z["Prueffrage an den Anbieter"]} |'
         )
     return kopf + "\n".join(zellen) + "\n"
 

@@ -33,9 +33,11 @@ realistisch (siehe [Projektauftrag](00_management/projektauftrag.md), Abschnitt 
 | --- | --- |
 | Repository initialisiert | ✅ erledigt |
 | Marktrecherche (Desk Research) | ✅ Erstfassung, siehe [`30_markt/marktueberblick.md`](30_markt/marktueberblick.md) |
-| Ist-Aufnahme beim Kunden | ⬜ offen – Workshop Woche 1 |
-| Anforderungskatalog freigegeben | ⬜ Entwurf liegt vor, Freigabe Woche 2 |
-| Anbieterentscheidung | ⬜ geplant Ende Woche 5 |
+| Ist-Zustand Bestandssystem | ✅ Zoho Subscriptions dokumentiert ([`10_analyse/ist_zustand_zoho.md`](10_analyse/ist_zustand_zoho.md)), Detailerhebung Woche 1 offen |
+| Anforderungskatalog | ✅ Version 0.2 mit Phasen 1/2 aus dem Kundendokument, Freigabe Woche 2 |
+| Shortlist | ✅ Kinnovis und Stora, Benchmark liegt vor ([`30_markt/benchmark_kinnovis_stora.md`](30_markt/benchmark_kinnovis_stora.md)) |
+| Migrationskonzept Zoho | ✅ Entwurf ([`50_umsetzung/migration_zoho.md`](50_umsetzung/migration_zoho.md)); Mandatsfrage offen |
+| Anbieterentscheidung | ⬜ nach den Demos, geplant Ende Woche 5 |
 | Go-Live | ⬜ geplant Woche 8 |
 
 ## Wichtiger Hinweis zu den Annahmen

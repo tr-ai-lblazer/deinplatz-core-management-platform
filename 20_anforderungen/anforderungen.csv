@@ -1,65 +1,72 @@
-ID;Domaene;Anforderung;Prioritaet;KO;Prueffrage an den Anbieter
-KUN-01;Kunden & Kontakte;Verwaltung von Privat- und Firmenkunden mit getrennten Pflichtfeldern (UID, Firmenwortlaut);Muss;nein;Wie werden Firmenkunden mit abweichender Rechnungsanschrift abgebildet?
-KUN-02;Kunden & Kontakte;Ein Kunde kann mehrere Einheiten und mehrere Vertraege gleichzeitig halten;Muss;ja;Wie sieht die Kundenakte bei 3 Vertraegen aus?
-KUN-03;Kunden & Kontakte;Vollstaendige Kundenhistorie (Vertraege, Rechnungen, Zahlungen, Kommunikation, Notizen) auf einen Blick;Muss;nein;Zeigen Sie die Kundenakte in der Demo.
-KUN-04;Kunden & Kontakte;Dublettenpruefung bei Neuanlage;Soll;nein;Woran wird eine Dublette erkannt?
-KUN-05;Kunden & Kontakte;Lead-/Interessentenverwaltung inkl. Quelle und Wiedervorlage;Soll;nein;Wie wird eine telefonische Anfrage erfasst und nachverfolgt?
-KUN-06;Kunden & Kontakte;Dokumentenablage je Kunde (Vertrag, Korrespondenz) mit Berechtigungssteuerung;Muss;nein;Wo liegen die Dokumente und wer darf sie sehen?
-OBJ-01;Einheiten & Belegung;Abbildung aller Einheiten mit Groesse, Typ, Merkmalen und Standort;Muss;ja;Wie werden 2,5 bis 50 m2 sowie Sonderflaechen abgebildet?
-OBJ-02;Einheiten & Belegung;Grafischer oder listenbasierter Belegungsplan in Echtzeit;Muss;nein;Wie schnell sieht der Mitarbeiter freie Einheiten je Groessenklasse?
-OBJ-03;Einheiten & Belegung;Statusverwaltung frei/reserviert/belegt/gesperrt inkl. Wartung;Muss;nein;Wie wird eine Einheit wegen Schaden gesperrt?
-OBJ-04;Einheiten & Belegung;Reservierung mit Ablaufdatum und automatischer Freigabe;Soll;nein;Was passiert mit einer nicht abgeholten Reservierung?
-OBJ-05;Einheiten & Belegung;Mehrere Standorte/Mandanten ohne Systemwechsel (Skalierung);Soll;nein;Wie wuerde ein zweiter Standort ergaenzt und was kostet er?
-BUC-01;Online-Buchung;Online-Verfuegbarkeitsanzeige und Buchung 24/7 mit Sofortzahlung;Soll;nein;Bitte den kompletten Online-Abschluss live vorfuehren.
-BUC-02;Online-Buchung;Einbindung in die bestehende Website (Widget/Seite) ohne Website-Neubau;Muss;nein;Wie erfolgt die technische Einbindung in unsere Website?
-BUC-03;Online-Buchung;Kundenportal zur Selbstverwaltung (Rechnungen, Zahlungsart, Kuendigung, Daten);Soll;nein;Was kann der Kunde selbst erledigen, was nicht?
-BUC-04;Online-Buchung;Buchungsstrecke vollstaendig in deutscher Sprache und rechtssicher (AGB, Widerruf, Datenschutz);Muss;ja;Sind alle Kundentexte deutschsprachig und anpassbar?
-VER-01;Vertrag;Mietvertrag aus Vorlage mit Serienfeldern erzeugen, Vorlagen selbst pflegbar;Muss;ja;Wie aendern wir eine Vertragsklausel ohne Anbieter?
-VER-02;Vertrag;Digitale Unterschrift rechtswirksam (vor Ort auf Tablet und per Fernsignatur);Soll;nein;Welches Signaturverfahren wird eingesetzt und wie wird es nachgewiesen?
-VER-03;Vertrag;Vertragsstatus steuert Folgeprozesse (Abrechnung, Zutritt, Mahnung) automatisch;Muss;ja;Was passiert systemseitig bei Statuswechsel auf gekuendigt?
-VER-04;Vertrag;Vertragsaenderungen: Umzug in andere Einheit, Preisaenderung, Zahlungsartwechsel mit Historie;Muss;nein;Wie wird ein Umzug in eine groessere Einheit abgebildet?
-VER-05;Vertrag;Kuendigung mit Fristenlogik, Endabrechnung und Kautionsabwicklung;Muss;nein;Bitte eine Kuendigung inkl. anteiliger Abrechnung zeigen.
-VER-06;Vertrag;Mindestmietdauer, unbefristete Vertraege und Aktionsbindung (z. B. 12 Monate) abbildbar;Muss;nein;Wie wird eine 12-Monats-Bindung mit Gratismonat hinterlegt?
-PRI-01;Preise & Rabatte;Preisliste je Groessenklasse und Standort, mit Gueltigkeitszeitraum;Muss;nein;Wie wird eine Preiserhoehung zum Stichtag geplant?
-PRI-02;Preise & Rabatte;Rabatte und Aktionen (Prozent, Betrag, Freimonate) mit Automatik nach Ablauf;Muss;ja;Was passiert nach Ende des Gratismonats automatisch?
-PRI-03;Preise & Rabatte;Preisanpassung bestehender Vertraege mit Ankuendigungsschreiben und Wirksamkeitsdatum;Soll;nein;Wie werden Bestandskunden ueber eine Erhoehung informiert?
-PRI-04;Preise & Rabatte;Dynamische Preise nach Belegungsgrad (Revenue Management);Kann;nein;Gibt es Preisautomatik nach Auslastung?
-ABR-01;Abrechnung & Zahlung;Automatischer wiederkehrender Abrechnungslauf (monatlich) fuer alle aktiven Vertraege;Muss;ja;Wie viele Klicks braucht der Monatslauf?
-ABR-02;Abrechnung & Zahlung;Taggenaue anteilige Abrechnung bei Ein- und Auszug;Muss;ja;Rechnen Sie einen Einzug am 17. des Monats vor.
-ABR-03;Abrechnung & Zahlung;Rechnungen nach oesterreichischem Recht (Pflichtangaben, USt.-Ausweis, fortlaufende Nummer);Muss;ja;Bitte eine Musterrechnung fuer AT zeigen.
-ABR-04;Abrechnung & Zahlung;SEPA-Lastschrift inkl. Mandatsverwaltung, Vorabinformation und Ruecklaeuferbearbeitung;Muss;ja;Wie werden Ruecklastschriften (R-Transaktionen) verarbeitet?
-ABR-05;Abrechnung & Zahlung;Kartenzahlung wiederkehrend (tokenisiert) als Alternative zur Lastschrift;Soll;nein;Welche Zahlungsdienstleister sind angebunden und zu welchen Gebuehren?
-ABR-06;Abrechnung & Zahlung;Automatischer Zahlungsabgleich und offene-Posten-Liste;Muss;ja;Wie wird eine Teilzahlung zugeordnet?
-ABR-07;Abrechnung & Zahlung;Rechnungsversand per E-Mail als PDF, optional Post/Portal-Abruf;Muss;nein;Wie sieht der Versandprozess und das Fehlerhandling aus?
-ABR-08;Abrechnung & Zahlung;Gutschriften, Storni und Guthabenverrechnung;Muss;nein;Wie wird eine falsch gestellte Rechnung korrigiert?
-ABR-09;Abrechnung & Zahlung;Kautionen und Depots getrennt fuehren und rueckzahlen;Soll;nein;Wo sieht man offene Kautionen?
-ABR-10;Abrechnung & Zahlung;Barzahlung mit Belegausgabe am Standort (Registrierkassenanbindung falls erforderlich);Soll;nein;Wie wird eine Barzahlung RKSV-konform erfasst?
-ABR-11;Abrechnung & Zahlung;Zusatzleistungen (Versicherung, Schloss, Kartons, Parkplatz) mit korrektem Steuersatz abrechnen;Muss;nein;Wie werden Waren und Mieten auf einer Rechnung getrennt?
-ABR-12;Abrechnung & Zahlung;E-Rechnung im strukturierten Format (ebInterface/Peppol) fuer Firmenkunden und oeffentliche Auftraggeber;Kann;nein;Welche E-Rechnungsformate werden unterstuetzt?
-MAH-01;Mahnwesen;Regelbasierte Mahnstufen mit Fristen, Textvorlagen und automatischem Versand;Muss;ja;Bitte den konfigurierten Mahnlauf zeigen.
-MAH-02;Mahnwesen;Mahnspesen und Verzugszinsen automatisch berechnen;Soll;nein;Wie werden Mahnspesen hinterlegt?
-MAH-03;Mahnwesen;Automatische Zutrittssperre ab definierter Mahnstufe (ueber Zutrittsschnittstelle);Soll;nein;Wie wird die Sperre technisch ausgeloest und wieder aufgehoben?
-MAH-04;Mahnwesen;Uebersicht Aussenstaende nach Alter und Mahnstufe;Muss;nein;Zeigen Sie das Debitorenreporting.
-ZUT-01;Zutrittskontrolle;Schnittstelle zum bestehenden Zutrittssystem (Hersteller in W1 zu erheben);Soll;nein;Welche Zutrittssysteme sind nativ integriert, welche per API?
-ZUT-02;Zutrittskontrolle;Zutrittsberechtigung folgt automatisch dem Vertragsstatus;Soll;nein;Wie schnell wirkt eine Sperre nach Statuswechsel?
-ZUT-03;Zutrittskontrolle;Zutrittsprotokoll im System einsehbar und auswertbar;Kann;nein;Wo sieht man, wer wann Zutritt hatte?
-BUH-01;Buchhaltung;Export der Buchungsdaten im Format der Steuerberatung (BMD, RZL, DATEV oder definiertes CSV);Muss;ja;Welche Exportformate liefern Sie standardmaessig?
-BUH-02;Buchhaltung;Konten- und Steuerschluesselzuordnung konfigurierbar;Muss;nein;Wie werden Erloeskonten je Leistungsart zugeordnet?
-BUH-03;Buchhaltung;Unveraenderbarkeit und Nachvollziehbarkeit der Belege (keine stille Aenderung nach Versand);Muss;ja;Wie wird eine bereits versendete Rechnung technisch geschuetzt?
-BUH-04;Buchhaltung;Bankkontoabgleich (CAMT/MT940-Import oder Provider-Abgleich);Soll;nein;Wie kommen Ueberweisungen ins System?
-REP-01;Reporting;Standardberichte: Belegungsgrad, Umsatz je m2, Neuzugaenge/Kuendigungen, Aussenstaende;Muss;nein;Welche Berichte gibt es ohne Zusatzkosten?
-REP-02;Reporting;Export aller Berichte nach Excel/CSV;Muss;nein;Bitte Export live zeigen.
-REP-03;Reporting;Eigene Auswertungen ohne Anbieterunterstuetzung erstellbar;Soll;nein;Wie baut man einen eigenen Bericht?
-REP-04;Reporting;Kennzahlen-Dashboard fuer die Geschaeftsfuehrung;Kann;nein;Gibt es ein Startseiten-Dashboard?
-KOM-01;Kommunikation;Automatisierte E-Mails (Willkommen, Rechnung, Zahlungserinnerung, Vertragsende) mit eigenen Vorlagen;Muss;nein;Wie pflegen wir Texte und Logo selbst?
-KOM-02;Kommunikation;SMS- oder WhatsApp-Benachrichtigung bei Zahlungsverzug oder Zutrittsthemen;Kann;nein;Welche Kanaele sind integriert und was kosten sie?
-KOM-03;Kommunikation;Alle Kundentexte in deutscher Sprache, Duzen/Siezen frei waehlbar;Muss;ja;Sind saemtliche Systemtexte deutsch anpassbar?
-KOM-04;Kommunikation;Dokumentierte Kommunikationshistorie je Kunde;Soll;nein;Wo sieht man versendete Mails?
-ADM-01;Administration;Rollen- und Rechtekonzept (GF, Buero, Facility Manager, Steuerberatung lesend);Muss;nein;Welche Rollen sind vorkonfiguriert?
-ADM-02;Administration;Protokollierung von Aenderungen (wer hat wann was geaendert);Muss;nein;Zeigen Sie das Aenderungsprotokoll eines Vertrags.
-ADM-03;Administration;Auftragsverarbeitungsvertrag nach Art. 28 DSGVO und Hosting in der EU;Muss;ja;Wo liegen die Daten und liegt ein AVV vor?
-ADM-04;Administration;Loeschkonzept und Aufbewahrungsfristen konfigurierbar;Soll;nein;Wie werden Daten nach Fristablauf geloescht?
-ADM-05;Administration;Vollstaendiger Datenexport aller Objekte jederzeit selbststaendig moeglich;Muss;ja;Bitte den Gesamtexport demonstrieren.
-ADM-06;Administration;Zwei-Faktor-Authentifizierung fuer Benutzerkonten;Soll;nein;Ist 2FA verfuegbar und erzwingbar?
-ADM-07;Administration;Benutzeroberflaeche deutschsprachig;Muss;ja;Ist die Oberflaeche vollstaendig auf Deutsch?
-ADM-08;Administration;Deutschsprachiger Support mit definierten Reaktionszeiten;Muss;ja;Wie sind Supportzeiten, Kanaele und Reaktionszeiten geregelt?
+ID;Domaene;Anforderung;Prioritaet;KO;Prueffrage an den Anbieter;Phase
+KUN-01;Kunden & Kontakte;Verwaltung von Privat- und Firmenkunden mit getrennten Pflichtfeldern (UID, Firmenwortlaut);Muss;nein;Wie werden Firmenkunden mit abweichender Rechnungsanschrift abgebildet?;1
+KUN-02;Kunden & Kontakte;Ein Kunde kann mehrere Einheiten und mehrere Vertraege gleichzeitig halten;Muss;ja;Wie sieht die Kundenakte bei 3 Vertraegen aus?;1
+KUN-03;Kunden & Kontakte;Vollstaendige Kundenhistorie (Vertraege, Rechnungen, Zahlungen, Kommunikation, Notizen) auf einen Blick;Muss;nein;Zeigen Sie die Kundenakte in der Demo.;1
+KUN-04;Kunden & Kontakte;Dublettenpruefung bei Neuanlage;Soll;nein;Woran wird eine Dublette erkannt?;1
+KUN-05;Kunden & Kontakte;Lead-/Interessentenverwaltung inkl. Quelle und Wiedervorlage;Soll;nein;Wie wird eine telefonische Anfrage erfasst und nachverfolgt?;1
+KUN-06;Kunden & Kontakte;Dokumentenablage je Kunde (Vertrag, Korrespondenz) mit Berechtigungssteuerung;Muss;nein;Wo liegen die Dokumente und wer darf sie sehen?;1
+OBJ-01;Einheiten & Belegung;Abbildung aller Einheiten mit Groesse, Typ, Merkmalen und Standort;Muss;ja;Wie werden 2,5 bis 50 m2 sowie Sonderflaechen abgebildet?;1
+OBJ-02;Einheiten & Belegung;Grafischer oder listenbasierter Belegungsplan in Echtzeit;Muss;nein;Wie schnell sieht der Mitarbeiter freie Einheiten je Groessenklasse?;1
+OBJ-03;Einheiten & Belegung;Statusverwaltung frei/reserviert/belegt/gesperrt inkl. Wartung;Muss;nein;Wie wird eine Einheit wegen Schaden gesperrt?;1
+OBJ-04;Einheiten & Belegung;Reservierung mit Ablaufdatum und automatischer Freigabe;Soll;nein;Was passiert mit einer nicht abgeholten Reservierung?;1
+OBJ-05;Einheiten & Belegung;Mehrere Standorte/Mandanten ohne Systemwechsel (Skalierung);Soll;nein;Wie wuerde ein zweiter Standort ergaenzt und was kostet er?;2
+OBJ-06;Einheiten & Belegung;Grafischer Anlageplan (Facility Map) der Anlage mit Belegungsstatus;Soll;nein;Ist der Anlageplan im Standard bzw. im angebotenen Tarif enthalten?;2
+BUC-01;Online-Buchung;Online-Verfuegbarkeitsanzeige und Buchung 24/7 mit Sofortzahlung;Soll;nein;Bitte den kompletten Online-Abschluss live vorfuehren.;2
+BUC-02;Online-Buchung;Einbindung in die bestehende Website (Widget/Seite) ohne Website-Neubau;Muss;nein;Wie erfolgt die technische Einbindung in unsere Website?;1
+BUC-03;Online-Buchung;Kundenportal zur Selbstverwaltung (Rechnungen, Zahlungsart, Kuendigung, Daten);Soll;nein;Was kann der Kunde selbst erledigen, was nicht?;2
+BUC-04;Online-Buchung;Buchungsstrecke vollstaendig in deutscher Sprache und rechtssicher (AGB, Widerruf, Datenschutz);Muss;ja;Sind alle Kundentexte deutschsprachig und anpassbar?;2
+BUC-05;Online-Buchung;Funktionsumfang des Kundenportals einschraenkbar (z. B. nur Aenderung der Zahlungsmethode);Soll;nein;Welche Bereiche des Kundenportals lassen sich deaktivieren?;2
+VER-01;Vertrag;Mietvertrag aus Vorlage mit Serienfeldern erzeugen, Vorlagen selbst pflegbar;Muss;ja;Wie aendern wir eine Vertragsklausel ohne Anbieter?;1
+VER-02;Vertrag;Digitale Unterschrift rechtswirksam (vor Ort auf Tablet und per Fernsignatur);Soll;nein;Welches Signaturverfahren wird eingesetzt und wie wird es nachgewiesen?;1
+VER-03;Vertrag;Vertragsstatus steuert Folgeprozesse (Abrechnung, Zutritt, Mahnung) automatisch;Muss;ja;Was passiert systemseitig bei Statuswechsel auf gekuendigt?;1
+VER-04;Vertrag;Vertragsaenderungen: Umzug in andere Einheit, Preisaenderung, Zahlungsartwechsel mit Historie;Muss;nein;Wie wird ein Umzug in eine groessere Einheit abgebildet?;1
+VER-05;Vertrag;Kuendigung mit Fristenlogik, Endabrechnung und Kautionsabwicklung;Muss;nein;Bitte eine Kuendigung inkl. anteiliger Abrechnung zeigen.;1
+VER-06;Vertrag;Mindestmietdauer, unbefristete Vertraege und Aktionsbindung (z. B. 12 Monate) abbildbar;Muss;nein;Wie wird eine 12-Monats-Bindung mit Gratismonat hinterlegt?;1
+VER-07;Vertrag;Identitaetspruefung beim Vertragsabschluss, Ablage der Ausweiskopie nur soweit rechtlich begruendet;Soll;nein;Wird die Identitaet nur geprueft oder auch gespeichert, und wo liegt die Kopie?;1
+VER-08;Vertrag;Evidenzhaltung gekuendigter Vertraege: Fristenberechnung, Aufgabenliste bis zur foermlichen Rueckgabe, Statuskette bis zum Abschluss;Muss;nein;Bitte eine Kuendigung mit Frist inklusive Rueckgabeprozess vorfuehren;1
+PRI-01;Preise & Rabatte;Preisliste je Groessenklasse und Standort, mit Gueltigkeitszeitraum;Muss;nein;Wie wird eine Preiserhoehung zum Stichtag geplant?;1
+PRI-02;Preise & Rabatte;Rabatte und Aktionen (Prozent, Betrag, Freimonate) mit Automatik nach Ablauf;Muss;ja;Was passiert nach Ende des Gratismonats automatisch?;1
+PRI-03;Preise & Rabatte;Preisanpassung bestehender Vertraege mit Ankuendigungsschreiben und Wirksamkeitsdatum;Soll;nein;Wie werden Bestandskunden ueber eine Erhoehung informiert?;1
+PRI-04;Preise & Rabatte;Dynamische Preise nach Belegungsgrad (Revenue Management);Kann;nein;Gibt es Preisautomatik nach Auslastung?;2
+ABR-01;Abrechnung & Zahlung;Automatischer wiederkehrender Abrechnungslauf (monatlich) fuer alle aktiven Vertraege;Muss;ja;Wie viele Klicks braucht der Monatslauf?;1
+ABR-02;Abrechnung & Zahlung;Taggenaue anteilige Abrechnung bei Ein- und Auszug;Muss;ja;Rechnen Sie einen Einzug am 17. des Monats vor.;1
+ABR-03;Abrechnung & Zahlung;Rechnungen nach oesterreichischem Recht (Pflichtangaben, USt.-Ausweis, fortlaufende Nummer);Muss;ja;Bitte eine Musterrechnung fuer AT zeigen.;1
+ABR-04;Abrechnung & Zahlung;SEPA-Lastschrift inkl. Mandatsverwaltung, Vorabinformation und Ruecklaeuferbearbeitung;Muss;ja;Wie werden Ruecklastschriften (R-Transaktionen) verarbeitet?;1
+ABR-05;Abrechnung & Zahlung;Kartenzahlung wiederkehrend (tokenisiert) als Alternative zur Lastschrift;Muss;nein;Welche Zahlungsdienstleister sind angebunden und zu welchen Gebuehren?;1
+ABR-06;Abrechnung & Zahlung;Automatischer Zahlungsabgleich und offene-Posten-Liste;Muss;ja;Wie wird eine Teilzahlung zugeordnet?;1
+ABR-07;Abrechnung & Zahlung;Rechnungsversand per E-Mail als PDF, optional Post/Portal-Abruf;Muss;nein;Wie sieht der Versandprozess und das Fehlerhandling aus?;1
+ABR-08;Abrechnung & Zahlung;Gutschriften, Storni und Guthabenverrechnung;Muss;nein;Wie wird eine falsch gestellte Rechnung korrigiert?;1
+ABR-09;Abrechnung & Zahlung;Kautionen und Depots getrennt fuehren und rueckzahlen;Soll;nein;Wo sieht man offene Kautionen?;1
+ABR-10;Abrechnung & Zahlung;Barzahlung mit Belegausgabe am Standort (Registrierkassenanbindung falls erforderlich);Soll;nein;Wie wird eine Barzahlung RKSV-konform erfasst?;2
+ABR-11;Abrechnung & Zahlung;Zusatzleistungen (Versicherung, Schloss, Kartons, Parkplatz) mit korrektem Steuersatz abrechnen;Muss;nein;Wie werden Waren und Mieten auf einer Rechnung getrennt?;1
+ABR-12;Abrechnung & Zahlung;E-Rechnung im strukturierten Format (ebInterface/Peppol) fuer Firmenkunden und oeffentliche Auftraggeber;Kann;nein;Welche E-Rechnungsformate werden unterstuetzt?;2
+ABR-13;Abrechnung & Zahlung;Selektiver Rechnungslauf (Auswahl einzelner Vertraege oder Gruppen) zusaetzlich zum Gesamtlauf;Soll;nein;Wie waehlt man einzelne Vertraege fuer einen Lauf aus?;1
+ABR-14;Abrechnung & Zahlung;Zahlungsart je Vertrag frei waehlbar (SEPA-Lastschrift, Karte, Ueberweisung) und durch den Kunden aenderbar;Muss;ja;Wie wechselt eine Kundin oder ein Kunde die Zahlungsart?;1
+MAH-01;Mahnwesen;Regelbasierte Mahnstufen mit Fristen, Textvorlagen und automatischem Versand;Muss;ja;Bitte den konfigurierten Mahnlauf zeigen.;1
+MAH-02;Mahnwesen;Mahnspesen und Verzugszinsen automatisch berechnen;Soll;nein;Wie werden Mahnspesen hinterlegt?;1
+MAH-03;Mahnwesen;Automatische Zutrittssperre ab definierter Mahnstufe (ueber Zutrittsschnittstelle);Soll;nein;Wie wird die Sperre technisch ausgeloest und wieder aufgehoben?;2
+MAH-04;Mahnwesen;Uebersicht Aussenstaende nach Alter und Mahnstufe;Muss;nein;Zeigen Sie das Debitorenreporting.;1
+ZUT-01;Zutrittskontrolle;Schnittstelle zum bestehenden Zutrittssystem (Hersteller in W1 zu erheben);Soll;nein;Welche Zutrittssysteme sind nativ integriert, welche per API?;2
+ZUT-02;Zutrittskontrolle;Zutrittsberechtigung folgt automatisch dem Vertragsstatus;Soll;nein;Wie schnell wirkt eine Sperre nach Statuswechsel?;2
+ZUT-03;Zutrittskontrolle;Zutrittsprotokoll im System einsehbar und auswertbar;Kann;nein;Wo sieht man, wer wann Zutritt hatte?;2
+BUH-01;Buchhaltung;Export der Buchungsdaten in einem fuer RZL importierbaren Format (RZL-CSV oder DATEV-CSV);Muss;ja;"Bitte Musterexport eines Monats liefern; ist das Format inkl. Konten und Steuerschluesseln konfigurierbar?";1
+BUH-02;Buchhaltung;Konten- und Steuerschluesselzuordnung konfigurierbar;Muss;nein;Wie werden Erloeskonten je Leistungsart zugeordnet?;1
+BUH-03;Buchhaltung;Unveraenderbarkeit und Nachvollziehbarkeit der Belege (keine stille Aenderung nach Versand);Muss;ja;Wie wird eine bereits versendete Rechnung technisch geschuetzt?;1
+BUH-04;Buchhaltung;Bankkontoabgleich (CAMT/MT940-Import oder Provider-Abgleich);Soll;nein;Wie kommen Ueberweisungen ins System?;1
+BUH-05;Buchhaltung;Aufloesung von Sammelauszahlungen des Zahlungsdienstleisters (Payouts) inklusive Gebuehren fuer die Buchhaltung;Muss;nein;Wie werden Payouts und Gebuehren im Buchhaltungsexport dargestellt?;1
+REP-01;Reporting;Standardberichte: Belegungsgrad, Umsatz je m2, Neuzugaenge/Kuendigungen, Aussenstaende;Muss;nein;Welche Berichte gibt es ohne Zusatzkosten?;1
+REP-02;Reporting;Export aller Berichte nach Excel/CSV;Muss;nein;Bitte Export live zeigen.;1
+REP-03;Reporting;Eigene Auswertungen ohne Anbieterunterstuetzung erstellbar;Soll;nein;Wie baut man einen eigenen Bericht?;2
+REP-04;Reporting;Kennzahlen-Dashboard fuer die Geschaeftsfuehrung;Kann;nein;Gibt es ein Startseiten-Dashboard?;2
+KOM-01;Kommunikation;Automatisierte E-Mails (Willkommen, Rechnung, Zahlungserinnerung, Vertragsende) mit eigenen Vorlagen;Muss;nein;Wie pflegen wir Texte und Logo selbst?;1
+KOM-02;Kommunikation;SMS- oder WhatsApp-Benachrichtigung bei Zahlungsverzug oder Zutrittsthemen;Kann;nein;Welche Kanaele sind integriert und was kosten sie?;2
+KOM-03;Kommunikation;Alle Kundentexte in deutscher Sprache, Duzen/Siezen frei waehlbar;Muss;ja;Sind saemtliche Systemtexte deutsch anpassbar?;1
+KOM-04;Kommunikation;Dokumentierte Kommunikationshistorie je Kunde;Soll;nein;Wo sieht man versendete Mails?;1
+ADM-01;Administration;Rollen- und Rechtekonzept (GF, Buero, Facility Manager, Steuerberatung lesend);Muss;nein;Welche Rollen sind vorkonfiguriert?;1
+ADM-02;Administration;Protokollierung von Aenderungen (wer hat wann was geaendert);Muss;nein;Zeigen Sie das Aenderungsprotokoll eines Vertrags.;1
+ADM-03;Administration;Auftragsverarbeitungsvertrag nach Art. 28 DSGVO und Hosting in der EU;Muss;ja;Wo liegen die Daten und liegt ein AVV vor?;1
+ADM-04;Administration;Loeschkonzept und Aufbewahrungsfristen konfigurierbar;Soll;nein;Wie werden Daten nach Fristablauf geloescht?;2
+ADM-05;Administration;Vollstaendiger Datenexport aller Objekte jederzeit selbststaendig moeglich;Muss;ja;Bitte den Gesamtexport demonstrieren.;1
+ADM-06;Administration;Zwei-Faktor-Authentifizierung fuer Benutzerkonten;Soll;nein;Ist 2FA verfuegbar und erzwingbar?;2
+ADM-07;Administration;Benutzeroberflaeche deutschsprachig;Muss;ja;Ist die Oberflaeche vollstaendig auf Deutsch?;1
+ADM-08;Administration;Deutschsprachiger Support mit definierten Reaktionszeiten;Muss;ja;Wie sind Supportzeiten, Kanaele und Reaktionszeiten geregelt?;1

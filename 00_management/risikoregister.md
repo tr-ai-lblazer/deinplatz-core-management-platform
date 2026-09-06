@@ -7,7 +7,7 @@ Stand: 06.09.2026 · Aktualisierung im wöchentlichen Jour fixe.
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | R01 | Datenqualität im Altsystem schlechter als erwartet (Dubletten, fehlende IBAN/SEPA-Mandate, unklare Vertragsstände) | 4 | 4 | 16 | Testexport bereits in Woche 1, Bereinigung parallel zur Auswahl, Bereinigungsverantwortliche benennen | Beratung | offen |
 | R02 | Entscheidung in Woche 5 verzögert sich | 3 | 5 | 15 | Entscheidungstermin fix im Kalender, Entscheidungsvorlage 3 Tage vorher, Rückfallebene definiert | PL | offen |
-| R03 | SEPA-Mandate müssen neu eingeholt werden (Gläubiger-ID/Anbieterwechsel des Zahlungsdienstleisters) | 3 | 4 | 12 | Früh mit Bank/Payment-Anbieter klären; Mandatsmigration als eigene RFP-Frage stellen | Finanzen | offen |
+| R03 | **SEPA-Mandate müssen bei rund 120 Kunden neu eingeholt werden** – im Zoho-Export fehlen die IBANs; Übernahme nur bei identischem Zahlungsdienstleister und identischer Gläubiger-ID möglich | 4 | 4 | **16** | Klärung in Woche 1 (O-05/O-06); bei Neueinholung sofortiger Start der Kundenaktion mit 3–4 Wochen Vorlauf; Überweisung als Übergangslösung | Finanzen | **offen, hohe Priorität** |
 | R04 | Zutrittskontrolle lässt sich nicht (oder nur teuer) anbinden | 3 | 3 | 9 | Hersteller/Modell in Woche 1 erheben, Integrationsfrage in RFP, manueller Betrieb als Übergangslösung akzeptiert | Beratung | offen |
 | R05 | Kein Anbieter erfüllt die österreichischen Anforderungen (USt., Belege, Steuerberatungs-Export) vollständig | 2 | 5 | 10 | K.o.-Kriterien früh prüfen, Alternative „Fachsystem + Buchhaltungs-/Kassensystem" als Kombination bewerten | Beratung | offen |
 | R06 | Kapazität im Kleinbetrieb: Tagesgeschäft blockiert Projektmitarbeit | 4 | 3 | 12 | Feste Zeitfenster (halbtags/Woche) reservieren, Aufgaben so weit möglich an Beratung/Anbieter auslagern | GF | offen |
@@ -16,10 +16,15 @@ Stand: 06.09.2026 · Aktualisierung im wöchentlichen Jour fixe.
 | R09 | Migration verzögert den ersten Abrechnungslauf, Umsatz wird zu spät fakturiert | 2 | 5 | 10 | Cutover auf Monatsgrenze legen, Testlauf 2 mit echten Daten, Fallback: Fakturierung einmalig manuell | Beratung | offen |
 | R10 | Anbieter-Lock-in (kein vollständiger Datenexport) | 2 | 4 | 8 | Exportfähigkeit als K.o.-Kriterium und Vertragsklausel | GF | offen |
 | R11 | Scope-Ausweitung („wenn wir schon dabei sind …": Website, Marketing, zweiter Standort) | 4 | 3 | 12 | Nicht-Ziele im Projektauftrag, Themen in Backlog für Phase 2 | PL | offen |
-| R12 | Preis-/Kostenüberraschung durch transaktionsabhängige Gebühren | 3 | 3 | 9 | TCO über 3 Jahre mit realistischem Transaktionsvolumen rechnen, nicht mit Listenpreis je Modul | Beratung | offen |
+| R12 | Preis-/Kostenüberraschung durch transaktionsabhängige Gebühren | 3 | 3 | 9 | TCO über 3 Jahre mit realistischem Transaktionsvolumen rechnen, nicht mit Listenpreis je Modul; SEPA statt Karte als Standard | Beratung | offen |
+| R13 | **Kein Anbieter liefert einen in RZL importierbaren Buchhaltungsexport** | 3 | 5 | **15** | Musterexport beider Anbieter vor der Entscheidung von der Steuerberatung testweise importieren lassen; Rückfallebene: Mapping-Datei oder monatlicher Sammelbeleg | Beratung + Steuerberatung | offen |
+| R14 | Zuordnung Kunde ↔ Lagerabteil ist nicht strukturiert vorhanden (in Zoho kein Objektmodell) | 4 | 3 | 12 | Führende Einheitenliste in Woche 1 aufbauen und per Begehung vor Ort verifizieren | Fachverantwortung Betrieb | offen |
+| R15 | Deutschsprachigkeit der Kundendokumente bei einem Shortlist-Anbieter nicht gegeben | 2 | 5 | 10 | K.o.-Prüfung in der Demo an echten Vorlagen; Rückfallebene Weg B aus der Longlist | Beratung | offen |
 
 ## Top-3-Risiken zum Projektstart
 
-1. **R01 Datenqualität** – bestimmt den tatsächlichen Migrationsaufwand und damit den Go-Live-Termin.
-2. **R02 Entscheidungsverzug** – der 8-Wochen-Plan hat auf dem kritischen Pfad keinen Puffer.
-3. **R06 Kapazität** – im Kleinbetrieb ist Projektarbeit Zusatzarbeit; das ist einzuplanen, nicht zu hoffen.
+1. **R01/R03 Daten und Zahlungsmandate** – die fehlenden IBANs sind der längste Vorlauf im Projekt.
+   Klärung in Woche 1, nicht in Woche 6.
+2. **R13 RZL-Export** – die wichtigste Einzelanforderung des Kunden ist bei keinem Anbieter
+   nativ vorhanden; der Nachweis muss **vor** der Entscheidung erbracht werden.
+3. **R02 Entscheidungsverzug** – der 8-Wochen-Plan hat auf dem kritischen Pfad keinen Puffer.
