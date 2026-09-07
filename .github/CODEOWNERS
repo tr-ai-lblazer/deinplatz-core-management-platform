@@ -1,12 +1,15 @@
-# Wer wird automatisch zur Prüfung angefragt?
-# GitHub-Benutzernamen bitte eintragen, sobald sie feststehen.
-# Beispiel: *  @peter  @martin
+# Wer wird automatisch zur Pruefung angefragt?
+# Bekannte Konten im Repository: @tr-ai-lblazer (Administration), @sorgerm (Umsetzung).
+# Zum Aktivieren die gewuenschten Zeilen entkommentieren.
 
 # Gesamtes Repository
-# *                     @peter @martin
+# *                     @tr-ai-lblazer @sorgerm
 
-# Projektsteuerung und Entscheidungen
-# /00_management/       @peter
+# Projektsteuerung, Entscheidungen und Termine
+# /00_management/       @tr-ai-lblazer
 
 # Umsetzung, Migration und Cutover
-# /50_umsetzung/        @martin
+# /50_umsetzung/        @sorgerm
+
+# Anforderungen: Aenderungen immer durch die Projektleitung pruefen lassen
+# /20_anforderungen/    @tr-ai-lblazer

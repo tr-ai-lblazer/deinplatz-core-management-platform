@@ -57,6 +57,11 @@ Drei Ebenen, kombinierbar. Das vollständige Schema mit Farben steht in
 
 `kritischer-pfad` ist kein Schmuck: Diese Issues werden im Jour fixe zuerst durchgegangen.
 
+> **Noch zu erledigen:** Die Labels und die Meilensteine sind im Repository noch nicht angelegt.
+> Die Befehle dafür stehen in [`.github/labels.md`](.github/labels.md) und sind einmalig
+> auszuführen. Die bereits angelegten Issues nennen die vorgesehenen Labels im Text; sie können
+> danach in einem Durchgang gesetzt werden.
+
 ## 5. Meilensteine
 
 Jede Issue gehört zu einem Meilenstein. Die Meilensteine bilden den Projektplan ab

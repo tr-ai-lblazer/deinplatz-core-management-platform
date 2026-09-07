@@ -101,14 +101,14 @@ vermerkt.
 
 Werden als GitHub-Issues geführt; die Verantwortlichen sind aus den Notizen übernommen.
 
-| Nr. | Aufgabe | Verantwortlich | Termin |
-| --- | --- | --- | --- |
-| A1 | Checkliste mit Fragen und Demo-Inhalten für die Kinnovis-Demo erstellen | Team | vor dem Demotermin |
-| A2 | Cutover-Szenario einschließlich Langzeitarchivierung nach dem Sundown von Zoho entwerfen | Martina | bis M7 |
-| A3 | Demotermin mit Kinnovis organisieren – **nicht innerhalb der nächsten zwei Tage** | „Papa", Martin | KW 38 |
-| A4 | E-Mail an Sepp mit den Spezifikationsanforderungen für einen möglichst aufwandsarmen Datenaustausch mit der Buchhaltung | Peter | KW 38 |
-| A5 | Übergang der SEPA-Mandate und der Gläubiger-ID auf die GmbH mit Pickerle bzw. der Bank klären | Peter | KW 38 |
-| A6 | Lizenzmodell, Preise und Bindungsdauer von Kinnovis klären | Martin | mit der Demo |
+| Nr. | Aufgabe | Verantwortlich | Termin | Issue |
+| --- | --- | --- | --- | --- |
+| A1 | Checkliste mit Fragen und Demo-Inhalten für die Kinnovis-Demo abstimmen | Team | vor dem Demotermin | [#3](https://github.com/tr-ai-lblazer/deinplatz-core-management-platform/issues/3) |
+| A2 | Cutover-Szenario einschließlich Langzeitarchivierung nach dem Sundown von Zoho entwerfen | Martina | bis M7 | [#4](https://github.com/tr-ai-lblazer/deinplatz-core-management-platform/issues/4) |
+| A3 | Demotermin mit Kinnovis organisieren – **nicht innerhalb der nächsten zwei Tage** | „Papa", Martin | KW 38 | [#2](https://github.com/tr-ai-lblazer/deinplatz-core-management-platform/issues/2) |
+| A4 | E-Mail an Sepp mit den Spezifikationsanforderungen für den Datenaustausch mit der Buchhaltung | Peter | KW 38 | [#5](https://github.com/tr-ai-lblazer/deinplatz-core-management-platform/issues/5) |
+| A5 | Übergang der SEPA-Mandate und der Gläubiger-ID auf die GmbH mit Pickerle bzw. der Bank klären | Peter | KW 38 | [#1](https://github.com/tr-ai-lblazer/deinplatz-core-management-platform/issues/1) |
+| A6 | Lizenzmodell, Preise und Bindungsdauer von Kinnovis klären | Martin | mit der Demo | [#6](https://github.com/tr-ai-lblazer/deinplatz-core-management-platform/issues/6) |
 
 > Zu A1: Eine erste Fassung der Checkliste liegt bereits vor:
 > [`../../40_auswahl/demo_checkliste_kinnovis.md`](../../40_auswahl/demo_checkliste_kinnovis.md).
