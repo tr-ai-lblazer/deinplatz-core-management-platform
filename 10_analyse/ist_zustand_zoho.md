@@ -59,7 +59,7 @@ Self-Storage-System. Daraus folgen die Lücken, die das neue System schließen s
 
 **Einordnung:** Beide Kandidaten der Shortlist liefern Phase 2 im Standard mit. Die Phasung ist
 daher eine Frage der Einführungsreihenfolge, nicht des Produktumfangs – siehe
-[`../30_markt/benchmark_kinnovis_stora.md`](../30_markt/benchmark_kinnovis_stora.md), Abschnitt 4.
+[`../30_markt/benchmark_kinnovis_stora_store365.md`](../30_markt/benchmark_kinnovis_stora_store365.md), Abschnitt 4.
 
 ## 4. Datenlage für die Migration (Angabe des Kunden)
 
@@ -80,7 +80,7 @@ daher eine Frage der Einführungsreihenfolge, nicht des Produktumfangs – siehe
 
 ## 5. Offene Fragen aus dem Kundendokument
 
-Beantwortet in [`../30_markt/benchmark_kinnovis_stora.md`](../30_markt/benchmark_kinnovis_stora.md), Abschnitt 9:
+Beantwortet in [`../30_markt/benchmark_kinnovis_stora_store365.md`](../30_markt/benchmark_kinnovis_stora_store365.md), Abschnitt 9:
 
 1. Wie funktioniert der Abgleich mit der Bank? → 9.1
 2. Kann die Kundenverwaltung in OneDrive entfallen? → 9.2

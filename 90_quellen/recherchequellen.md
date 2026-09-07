@@ -71,6 +71,17 @@ verbindlich werden sie erst durch Angebote und Demos.
 | Buchhaltung: Export „formatiert für Xero", QuickBooks; 8.000+ Apps über Zapier | [stora.co – Xero](https://stora.co/integrations/xero) · [stora.co – Accounting](https://stora.co/integrations/accounting) · [stora.co – Integrations](https://stora.co/integrations) |
 | Nutzerbewertungen: günstiger als viele Wettbewerber, einfach zu bedienen; Reporting bei Mehrstandortbetrieb eingeschränkt | [capterra.com.de – Stora](https://www.capterra.com.de/software/1011583/stora) |
 
+### Store365 (Store-IT B.V.)
+
+| Erkenntnis | Quelle |
+| --- | --- |
+| Spezialist für Self-Storage-Managementsoftware seit 2000, Betreiber in über 18 europäischen Ländern, Software in 8 Sprachen, 100 Prozent Cloud | [store-it.eu – Startseite](https://store-it.eu/en/) · [store-it.eu – Über uns](https://store-it.eu/en/about-us/) |
+| Produktname Store365; Online-Buchung, digitale Signatur, Online-Zahlungen, automatische wiederkehrende Zahlungen, Online-Anbindung der Zutrittskontrolle; erste Software für unbemannte Anlagen | [store-it.eu – Store365, the software](https://store-it.eu/en/store356-the-software/) · [store-it.eu – Software](https://store-it.eu/en/software/) |
+| Erster und laut Anbieter bislang einziger Self-Storage-Softwareanbieter Europas mit ISO 27001; DSGVO-Fokus; unbegrenzter kostenloser Support in deutscher Sprache | [selfstorage-verband.de – Store-IT / Store365](https://www.selfstorage-verband.de/mitglieder/store-it) |
+| Vollständige Website-Integration über Standardbuchung oder öffentliche REST-API; Integrationen mit Zutrittskontrolle, Buchhaltungsprogrammen und Zahlungsanbietern; Preissteuerung nach Auslastung, Mietdauer und geplanten Preisänderungen; bemannte und unbemannte Standorte | [store-it.eu – Features](https://store-it.eu/en/features/) · [store-it.eu – Integrationen](https://store-it.eu/integraties/) |
+| Verbandsmitgliedschaften: Self-Storage-Verband (DACH), FEDESSA, SSA UK, NSSA, BSSA, AISI | [fedessa.org](https://www.fedessa.org/supplier/store-it-bv.html) · [ssauk.com](https://www.ssauk.com/supplier/store-it-bv.html) · [nssa.nl](https://www.nssa.nl/supplier/store-it-bv.html) |
+| Keine öffentliche Preisliste; Angebot auf Anfrage | Recherche 06.09.2026, keine Preisangabe auffindbar |
+
 ### Buchhaltung, Zahlung, Migration
 
 | Erkenntnis | Quelle |
@@ -80,7 +91,7 @@ verbindlich werden sie erst durch Angebote und Demos.
 | SEPA-Mandate anderer Zahlungsdienstleister können zu Stripe portiert werden; ein Übertrag zwischen Stripe-Konten ist nur für als PaymentMethod gespeicherte Mandate und nur bei identischer Gläubiger-ID möglich | [Stripe Support – Migrating SEPA mandates](https://support.stripe.com/questions/migrating-sepa-direct-debit-mandates-from-another-payment-provider-to-stripe) · [Stripe Docs – Copy PAN data across accounts](https://docs.stripe.com/get-started/data-migrations/pan-copy-self-serve) |
 | Zoho Subscriptions/Billing: Export je Modul (Kunden, Abonnements, Rechnungen, Zahlungen, Pläne) als CSV/TSV/XLS, konfigurierbare Exportvorlagen, vollständige Datensicherung | [Zoho – Import & Export](https://www.zoho.com/us/subscriptions/help/import-export.html) · [Zoho – Export Templates](https://www.zoho.com/us/subscriptions/help/export-templates.html) · [Zoho – Data Backup](https://www.zoho.com/us/billing/help/settings/developer-space/backup-your-data.html) |
 
-> **Einschränkung:** `kinnovis.com` und `stora.co` sind aus der Arbeitsumgebung netzwerkseitig
+> **Einschränkung:** `kinnovis.com`, `stora.co` und `store-it.eu` sind aus der Arbeitsumgebung netzwerkseitig
 > nicht direkt abrufbar. Die Inhalte stammen aus Suchergebnissen und Drittquellen; die Links
 > sind zur Nachprüfung durch das Projektteam angegeben.
 
@@ -94,7 +105,8 @@ verbindlich werden sie erst durch Angebote und Demos.
 | Q4 | Konditionen von Zahlungsdienstleistern für SEPA-Lastschrift in Österreich einholen (Hausbank vs. Stripe) | W2 |
 | Q5 | ~~Exportformat der Steuerberatung~~ **geklärt: RZL.** Offen: Nachweis des Importwegs per Musterexport | vor Entscheidung |
 | Q7 | Deutschsprachigkeit der Stora-Oberfläche und -Kundendokumente belegen (Anbieterauskunft) | W3 |
-| Q8 | Kinnovis-Preismodell und Tarifzuordnung bei Stora einholen | W3 |
+| Q8 | Kinnovis-Preismodell, Tarifzuordnung bei Stora und Preismodell von Store365 einholen | W3 |
+| Q9 | Store365: Zahlungsanbieter, SEPA-Weg über die eigene Bank, Buchhaltungsexport und Referenzen in Österreich klären | W3 |
 | Q6 | Marktpreise/Wettbewerb in Villach für die Preisgestaltung im neuen System (MyPlace, Storebox, lokale Anbieter) | W4 |
 
 ## Zitierregel

@@ -1,18 +1,19 @@
-# Benchmark: Kinnovis vs. Stora
+# Benchmark: Kinnovis, Stora und Store365 (Store-IT)
 
-Stand: 06.09.2026 · Bezug: Anforderungsdokument „Umstellung Software deinPlatz v1" (Phase 1/2)
+Stand: 06.09.2026 · Version 1.1 (Store365 ergänzt) · Bezug: Anforderungsdokument „Umstellung Software deinPlatz v1" (Phase 1/2)
 
 > **Ergänzender Report:** Die Zahlungsabwicklung ist in einem eigenen Report für die
-> Geschäftsführung vertieft: [`benchmark_kinnovis_stora_zahlungsabwicklung.docx`](benchmark_kinnovis_stora_zahlungsabwicklung.docx)
+> Geschäftsführung vertieft: [`benchmark_kinnovis_stora_store365_zahlungsabwicklung.docx`](benchmark_kinnovis_stora_store365_zahlungsabwicklung.docx)
 > – Betriebsmodelle, Einbindung der Bestandskunden, Automatisierungsgrad und Kosten.
 Quellen: [`../90_quellen/recherchequellen.md`](../90_quellen/recherchequellen.md)
 
 ## 0. Auf einen Blick
 
-**Empfehlung (vorläufig, bis zu den Demos): Kinnovis liegt für deinPlatz vorn.**
+**Empfehlung (vorläufig, bis zu den Demos): Kinnovis liegt knapp vorn, Store365 ist der
+ernsthafteste Herausforderer.**
 
-Der Grund ist nicht der Funktionsumfang – der ist bei beiden Produkten für einen Standort mehr
-als ausreichend – sondern der Rechts- und Sprachraum:
+Der Grund ist nicht der Funktionsumfang – der reicht bei allen drei Produkten für einen Standort
+aus – sondern der Rechts- und Sprachraum:
 
 1. **Kinnovis kommt aus Österreich.** Das Produkt ist aus dem Betrieb der Marke STORE ROOM
    (Muttergesellschaft Zinkpower) entstanden, deren Flaggschiff mit 9.000 m² als größte
@@ -25,12 +26,20 @@ als ausreichend – sondern der Rechts- und Sprachraum:
 3. **Zahlung:** Kinnovis unterstützt neben Stripe auch einen **SEPA-Lastschrift-XML-Export**,
    also Einzug über die Hausbank ohne Kartengebühren. Stora wickelt Zahlungen ausschließlich
    über Stripe ab (Karte, SEPA, Link).
-4. **Stora ist dafür kaufmännisch transparenter** (öffentliche Preise ab 99 GBP/Monat, keine
-   Mindestlaufzeit) und beim Thema Ertragssteuerung/dynamische Preise weiter.
+4. **Store365 (Store-IT B.V., Niederlande) ist der Spezialist mit dem längsten Marktatem:**
+   seit 2000 am Markt, Betreiber in über 18 europäischen Ländern, acht Sprachen,
+   **unbegrenzter kostenloser Support auf Deutsch** ✅, Mitglied im Self-Storage-Verband ✅ und
+   als bislang einziger Anbieter in Europa **ISO 27001 zertifiziert** ✅. Für einen Betrieb, der
+   Wert auf Datensicherheit, Verlässlichkeit und deutschsprachige Betreuung legt, ist das ein
+   starkes Profil. Offen sind bei Store365 die konkreten Zahlungswege für Österreich und der
+   Buchhaltungsexport Richtung RZL.
+5. **Stora ist kaufmännisch am transparentesten** (öffentliche Preise ab 99 GBP/Monat, keine
+   Mindestlaufzeit) und beim Thema Ertragssteuerung/dynamische Preise weit – trägt aber im
+   Rechts- und Buchhaltungsteil das größte Fragezeichen.
 
 **Aber:** Kein Punkt in diesem Dokument ersetzt die Demo. Die drei Fragen, die die Entscheidung
 tatsächlich kippen können – RZL-Import in der Praxis, deutschsprachige Kundendokumente,
-Übernahme der Zahlungsdaten aus Zoho – sind bei **beiden** Anbietern noch offen und in
+Übernahme der Zahlungsdaten aus Zoho – sind bei **allen drei** Anbietern noch offen und in
 Abschnitt 10 als Fragenkatalog vorbereitet.
 
 ## 1. Belastbarkeit dieser Analyse
@@ -42,43 +51,45 @@ Abschnitt 10 als Fragenkatalog vorbereitet.
 | ❓ | Offen, muss vom Anbieter beantwortet werden |
 | ❌ | Nach aktuellem Stand nicht gegeben |
 
-> **Einschränkung:** Die Websites `kinnovis.com` und `stora.co` sind aus dieser Arbeitsumgebung
+> **Einschränkung:** Die Websites `kinnovis.com`, `stora.co` und `store-it.eu` sind aus dieser Arbeitsumgebung
 > netzwerkseitig nicht direkt abrufbar. Die Angaben stammen aus Suchergebnissen, Fach- und
 > Vergleichsportalen sowie Verbandsverzeichnissen. Produktangaben von Anbieterseiten sind
 > Marketingaussagen – verbindlich werden sie erst durch Demo und Angebot.
 
 ## 2. Anbietersteckbriefe
 
-| Merkmal | **Kinnovis** | **Stora** |
-| --- | --- | --- |
-| Unternehmen | Kinnovis GmbH ✅ | Stora (UK/Irland) ✅ |
-| Herkunft | Aus dem eigenen Self-Storage-Betrieb in **Österreich** entstanden (Zinkpower / STORE ROOM, seit 2018) ✅ | Aus dem UK-Markt für unabhängige Betreiber ✅ |
-| Marktpräsenz | Betreiber in 19 europäischen Ländern ✅; DACH-Kunden u. a. CoStore (Leipzig, Brandenburg a. d. H.), Zweitbox ✅ | Betreiber in 19 Ländern ✅, Schwerpunkt UK/Irland 🟡 |
-| Verbandsmitgliedschaft | Self-Storage-Verband (DACH) ✅ | ❓ |
-| Deutschsprachige Website | ja (`kinnovis.com/de`) ✅ | deutschsprachige Produktbeschreibung vorhanden ✅, Produktoberfläche ❓ |
-| Positionierung | „AI-powered" Verwaltungsplattform, von Betreibern für Betreiber ✅ | Automatisierungs- und Wachstumsplattform für unabhängige Betreiber ✅ |
-| Preismodell | nicht öffentlich, Angebot nach Standort/Einheiten ✅ | öffentlich: Essentials 99 GBP, Advanced 149 GBP, Premium 299 GBP pro Monat; keine Setup-Gebühr, keine Mindestlaufzeit ✅ (EUR-Preisliste separat, zu prüfen) |
+| Merkmal | **Kinnovis** | **Stora** | **Store365 (Store-IT)** |
+| --- | --- | --- | --- |
+| Unternehmen | Kinnovis GmbH ✅ | Stora (UK/Irland) ✅ | Store-IT B.V., Niederlande ✅ |
+| Am Markt seit | 2018 (aus dem eigenen Betrieb) ✅ | UK-Markt, jüngerer Anbieter 🟡 | **2000** ✅ |
+| Herkunft | Aus dem eigenen Self-Storage-Betrieb in **Österreich** entstanden (Zinkpower / STORE ROOM) ✅ | Aus dem UK-Markt für unabhängige Betreiber ✅ | Reiner Softwarespezialist für den europäischen Self-Storage-Markt ✅ |
+| Marktpräsenz | Betreiber in 19 europäischen Ländern ✅; DACH-Kunden u. a. CoStore, Zweitbox ✅ | Betreiber in 19 Ländern ✅, Schwerpunkt UK/Irland 🟡 | Betreiber in über 18 europäischen Ländern ✅ |
+| Verbandsmitgliedschaft | Self-Storage-Verband (DACH) ✅ | ❓ | Self-Storage-Verband (DACH), FEDESSA, SSA UK, NSSA, BSSA, AISI ✅ |
+| Sprache | deutschsprachige Website und Plattformseiten ✅ | deutschsprachige Produktbeschreibung ✅, Oberfläche ❓ | 8 Sprachen ✅, **unbegrenzter kostenloser Support auf Deutsch** ✅ |
+| Zertifizierung | ❓ | ❓ | **ISO 27001** – nach Anbieterangabe der einzige zertifizierte Self-Storage-Softwareanbieter Europas ✅ |
+| Positionierung | „AI-powered" Verwaltungsplattform, von Betreibern für Betreiber ✅ | Automatisierungs- und Wachstumsplattform für unabhängige Betreiber ✅ | Spezialist für bemannte **und unbemannte** Anlagen, skalierbar vom Einzelstandort aufwärts ✅ |
+| Preismodell | nicht öffentlich ✅ | öffentlich: 99 / 149 / 299 GBP pro Monat, keine Setup-Gebühr, keine Mindestlaufzeit ✅ | nicht öffentlich ✅ |
 | Eigene Zutritts-Hardware | ja („Kinnovis Access": Tür-/Torsteuerung, Mieter-App, Buchung-bis-Zutritt) ✅ | nein, „Smart Access" über Integrationen ✅ |
 | Offene Schnittstelle | „Kinnovis Connect" (öffentliche API) ✅ | Zapier mit 8.000+ Apps ✅, API ❓ |
 
 ## 3. Bewertung entlang **Phase 1** (Ihr Anforderungsdokument)
 
-| Ihre Anforderung | Kinnovis | Stora | Bewertung |
-| --- | --- | --- | --- |
-| **Schnittstelle Steuerberater – RZL** | **DATEV-Report** als Integration ✅; RZL importiert DATEV-CSV ✅ → Brücke plausibel 🟡 | Export „formatiert für Xero" ✅; RZL-tauglicher Export ❓ | **Vorteil Kinnovis.** In beiden Fällen ist der Weg über eine Buchungsstapel-CSV zu bestätigen – mit RZL und mit der Steuerberatung |
-| **Vertrag/Angebot online inkl. Ausweiskopie** | E-Signatur im Online-Buchungsprozess ✅, Signable-Integration ✅, Identitätsprüfung über Stripe Identity (Pass/Fail) ✅ | Online-Buchung mit Vertragsabschluss ✅, E-Signatur 🟡, Ausweisprüfung ❓ | **Vorteil Kinnovis** – mit Einschränkung: Stripe Identity liefert *Prüfergebnis*, nicht zwingend eine *gespeicherte Ausweiskopie*. Falls Sie die Kopie ablegen wollen, ist das eine eigene Frage (auch datenschutzrechtlich, siehe 6.4) |
-| **Monatliche Rechnungserstellung und -versand, nach Auswahl** | automatisierte Rechnungsstellung über Stripe Billing ✅, automatisierte E-Mails mit Triggern ✅ | automatisierte Rechnungsstellung und Zahlungsabwicklung ✅ | **Gleichstand.** Prüfpunkt: „nach Auswahl" – also selektiver Lauf für einzelne Kunden/Gruppen – ist in der Demo zu zeigen |
-| **Zahlung wählbar: Lastschrift, Kreditkarte, Stripe o. ä.** | Stripe (Karte) ✅ **und** SEPA-Lastschrift-XML-Export für die Hausbank ✅ | Stripe: Karte, SEPA-Lastschrift, Link ✅; Kunde wählt beim Buchen die Methode ✅ | **Vorteil Kinnovis** bei der Wahlfreiheit (Bank-Lastschrift ohne Stripe möglich), **Vorteil Stora** bei der Bequemlichkeit im Buchungsprozess |
-| **Website integriert** | kostenlose Website im Produkt enthalten ✅, Buchungsportal ✅ | „Storefront" mit Buchungsstrecke, Website im Produkt ✅ | **Gleichstand.** Prüfpunkt für beide: Einbindung in die **bestehende** deinPlatz-Website statt Ersatz durch eine Anbieter-Website |
-| **Automatisierte E-Mails** | Vorlagen, Merge-Tags, Trigger (Zahlungserinnerung, Willkommen, Verlängerung) ✅ | automatisierte Kommunikation entlang Buchung/Zahlung ✅ | **Gleichstand.** Prüfpunkt: alle Texte deutsch und selbst pflegbar |
+| Ihre Anforderung | Kinnovis | Stora | Store365 | Bewertung |
+| --- | --- | --- | --- | --- |
+| **Schnittstelle Steuerberater – RZL** | **DATEV-Report** ✅; RZL importiert DATEV-CSV ✅ → Brücke plausibel 🟡 | Export „formatiert für Xero" ✅; RZL-tauglicher Export ❓ | Integration mit „bekannten Buchhaltungsprogrammen" ✅, welche konkret ❓; offene REST-API ✅ | **Vorteil Kinnovis.** Bei allen drei ist der Weg über eine Buchungsstapel-CSV mit RZL zu bestätigen |
+| **Vertrag/Angebot online inkl. Ausweiskopie** | E-Signatur im Buchungsprozess ✅, Signable ✅, Stripe Identity ✅ | Online-Buchung ✅, E-Signatur 🟡, Ausweisprüfung ❓ | **digitale Signatur im Standard** ✅, Ausweisprüfung ❓ | **Kinnovis und Store365 gleichauf**; zur Ausweiskopie siehe 6.4 |
+| **Monatliche Rechnungserstellung und -versand, nach Auswahl** | automatisiert über Stripe Billing ✅ | automatisiert ✅ | automatisierte wiederkehrende Abrechnung ✅ | **Gleichstand.** Prüfpunkt: selektiver Lauf für einzelne Verträge |
+| **Zahlung wählbar: Lastschrift, Kreditkarte, Stripe o. ä.** | Stripe ✅ **und** SEPA-XML für die Hausbank ✅ | ausschließlich Stripe (Karte, SEPA, Link) ✅ | Online-Zahlungen und automatische wiederkehrende Zahlungen ✅, Integration mit Zahlungsanbietern ✅; SEPA-Datei für die eigene Bank ❓ | **Vorteil Kinnovis**, Store365 offen – Klärung über Frage F4b |
+| **Website integriert** | kostenlose Website ✅, Buchungsportal ✅ | „Storefront" ✅ | vollständige Website-Integration über Standardbuchung **oder öffentliche API** ✅ | **Leichter Vorteil Store365** bei der Einbindung in die bestehende Website |
+| **Automatisierte E-Mails** | Vorlagen mit Triggern ✅ | automatisierte Kommunikation ✅ | Online-Kommunikation entlang Buchung, Zahlung und Zutritt ✅ | **Gleichstand.** Prüfpunkt: alle Texte deutsch und selbst pflegbar |
 
 ## 4. Bewertung entlang **Phase 2**
 
-| Ihre Anforderung | Kinnovis | Stora | Bewertung |
-| --- | --- | --- | --- |
-| **Buchungsportal** | 24/7-Buchungsportal im Standard ✅ | Storefront/Online-Buchung im Standard ✅ | Gleichstand – bei Stora traditionell der Produktkern |
-| **Kundenportal (nur Zahlungsmethode aktualisieren)** | Kundenportal für Einheiten, Zahlungen, Zutritt, Kontaktdaten ✅ | Kundenkonto zur Selbstverwaltung ✅ | Gleichstand. Prüfpunkt: Lässt sich der Umfang **einschränken** (nur Zahlungsdaten), oder kann der Kunde auch kündigen/ändern? |
-| **Anlageplan** | interaktive Facility Map im Standard ✅ | „Facility Maps" als neu eingeführtes Produkt ✅ 🟡 (Reifegrad/Plan-Zugehörigkeit prüfen) | **Leichter Vorteil Kinnovis** (länger im Produkt); bei Stora klären, ob Facility Maps im gewählten Tarif enthalten ist |
+| Ihre Anforderung | Kinnovis | Stora | Store365 | Bewertung |
+| --- | --- | --- | --- | --- |
+| **Buchungsportal** | 24/7-Buchungsportal im Standard ✅ | Storefront/Online-Buchung im Standard ✅ | Online-Buchung im Standard ✅ | Gleichstand – bei Stora traditionell der Produktkern |
+| **Kundenportal (nur Zahlungsmethode aktualisieren)** | Kundenportal ✅ | Kundenkonto ✅ | Kundenportal ✅ | Gleichstand. Prüfpunkt bei allen: Lässt sich der Umfang **einschränken**? |
+| **Anlageplan** | interaktive Facility Map im Standard ✅ | „Facility Maps", neu eingeführt ✅ 🟡 | ❓ – in der Demo zu zeigen | **Vorteil Kinnovis**; bei Stora Tarifzugehörigkeit, bei Store365 Existenz klären |
 
 Beide Anbieter liefern Phase 2 im Standard mit. **Konsequenz:** Die Aufteilung in Phase 1 und 2
 ist bei diesen zwei Kandidaten weniger eine Produkt- als eine Einführungsfrage – Sie können
@@ -88,33 +99,33 @@ vier Wochen später** – aber im selben System, ohne zweites Projekt.
 
 ## 5. Funktionaler Detailvergleich (Domänen des Anforderungskatalogs)
 
-| Domäne | Kinnovis | Stora | Anmerkung |
-| --- | --- | --- | --- |
-| Kunden & Kontakte (KUN) | ✅ | ✅ | Interessentenverfolgung bei beiden ❓ (siehe 9.4) |
-| Einheiten & Belegung (OBJ) | ✅ Facility Map | ✅ Facility Maps (neu) | – |
-| Online-Buchung & Portal (BUC) | ✅ | ✅ | Storefront von Stora gilt als besonders ausgereift 🟡 |
-| Vertragsmanagement (VER) | ✅ E-Signatur, Signable | 🟡 | Vertragsvorlagen in deutscher Sprache: bei beiden ❓ |
-| Preise & Rabatte (PRI) | ✅ | ✅ + dynamisches Revenue Management ✅ | **Vorteil Stora** bei automatischer Preissteuerung |
-| Abrechnung & Zahlung (ABR) | ✅ Stripe Billing + SEPA-XML | ✅ Stripe (Karte/SEPA/Link) | Österreichische USt.- und Rechnungslogik: bei beiden ❓ – **K.o.-Kriterium** |
-| Mahnwesen (MAH) | ✅ automatisierte Erinnerungen | ✅ automatisiertes Handling fehlgeschlagener Zahlungen | Mahnstufen, Spesen, Verzugszinsen nach AT-Praxis: ❓ |
-| Zutrittskontrolle (ZUT) | ✅ eigene Lösung + Sensorberg, Tapkey, JANUS/Nokē | ✅ Integrationen | **Vorteil Kinnovis** im DACH-Raum (Sensorberg, Tapkey sind hier verbreitet) |
-| Buchhaltung (BUH) | ✅ DATEV-Report, Xero | ✅ Xero, QuickBooks | **Vorteil Kinnovis** – siehe 6.1 |
-| Reporting (REP) | ✅ Analytics mit Filtern | ✅ Echtzeit-Kennzahlen | Nutzerkritik an Stora-Reporting bei Mehrstandort ✅ (für Sie irrelevant) |
-| Kommunikation (KOM) | ✅ | ✅ | Deutschsprachigkeit der Vorlagen: ❓ bei beiden |
-| Administration/DSGVO (ADM) | ❓ AVV/Hosting | ❓ AVV/Hosting | Bei beiden im RFP anzufordern |
+| Domäne | Kinnovis | Stora | Store365 | Anmerkung |
+| --- | --- | --- | --- | --- |
+| Kunden & Kontakte (KUN) | ✅ | ✅ | ✅ | Interessentenverfolgung bei allen ❓ (siehe 9.4) |
+| Einheiten & Belegung (OBJ) | ✅ Facility Map | ✅ Facility Maps (neu) | ✅ Mehrstandort, bemannt und unbemannt | – |
+| Online-Buchung & Portal (BUC) | ✅ | ✅ | ✅ inkl. öffentlicher API für die eigene Website | Storefront von Stora gilt als besonders ausgereift 🟡 |
+| Vertragsmanagement (VER) | ✅ E-Signatur, Signable | 🟡 | ✅ digitale Signatur | Vertragsvorlagen in deutscher Sprache: bei allen ❓ |
+| Preise & Rabatte (PRI) | ✅ | ✅ + Revenue Management ✅ | ✅ Preissteuerung nach Auslastung, Mietdauer und geplanten Änderungen ✅ | **Stora und Store365 vorn** |
+| Abrechnung & Zahlung (ABR) | ✅ Stripe Billing + SEPA-XML | ✅ nur Stripe | ✅ wiederkehrende Online-Zahlungen, Anbieter offen ❓ | Österreichische USt.- und Rechnungslogik: bei allen ❓ – **K.o.-Kriterium** |
+| Mahnwesen (MAH) | ✅ automatisierte Erinnerungen | ✅ automatisiertes Handling fehlgeschlagener Zahlungen | ❓ Ausgestaltung in der Demo zu zeigen | Mahnstufen, Spesen, Verzugszinsen nach AT-Praxis: ❓ |
+| Zutrittskontrolle (ZUT) | ✅ eigene Lösung + Sensorberg, Tapkey, JANUS/Nokē | ✅ Integrationen | ✅ Online-Anbindung, automatischer Check-in/Check-out; Spezialist für unbemannte Anlagen ✅ | **Kinnovis und Store365 vorn** |
+| Buchhaltung (BUH) | ✅ DATEV-Report, Xero | ✅ Xero, QuickBooks | ✅ Integration mit Buchhaltungsprogrammen, welche ❓ | **Vorteil Kinnovis** – siehe 6.1 |
+| Reporting (REP) | ✅ Analytics mit Filtern | ✅ Echtzeit-Kennzahlen | ✅ zentrale Datenbasis über alle Standorte | – |
+| Kommunikation (KOM) | ✅ | ✅ | ✅ | Deutschsprachigkeit der Vorlagen: ❓ bei allen |
+| Administration/DSGVO (ADM) | ❓ AVV/Hosting | ❓ AVV/Hosting | ✅ **ISO 27001**, DSGVO-Fokus | **Vorteil Store365** |
 
 ## 6. Die vier kritischen Punkte
 
 ### 6.1 RZL-Schnittstelle (Ihr wichtigster Punkt)
 
-Weder Kinnovis noch Stora hat eine native RZL-Integration – das hat kein Anbieter dieser
+Keiner der drei Anbieter hat eine native RZL-Integration – das hat kein Anbieter dieser
 Produktklasse. Realistisch sind drei Wege:
 
 | Weg | Beschreibung | Kinnovis | Stora |
 | --- | --- | --- | --- |
-| **A: DATEV-Format** | RZL importiert Buchungsstapel im DATEV-CSV-Format (nach DATEV-Leitfaden 1.4 inkl. Erweiterungen 2015) ✅ | DATEV-Report vorhanden ✅ → direkter Kandidat | ❌ nicht belegt |
-| **B: RZL-eigenes CSV** | RZL-Format mit getrennten Soll-/Haben-Spalten, positivem Betrag, numerischem USt.-Schlüssel ✅ | aus Standard-CSV-Export per Mapping erzeugbar 🟡 | aus Standard-CSV-Export per Mapping erzeugbar 🟡 |
-| **C: Belegweise** | Monatlicher Sammelbeleg/Umsatzliste plus Belegablage; Buchung durch die Kanzlei | bei beiden möglich, aber Rückschritt gegenüber heute | dito |
+| **A: DATEV-Format** | RZL importiert Buchungsstapel im DATEV-CSV-Format (nach DATEV-Leitfaden 1.4 inkl. Erweiterungen 2015) ✅ | DATEV-Report vorhanden ✅ → direkter Kandidat | Stora ❌ nicht belegt · Store365 ❓ |
+| **B: RZL-eigenes CSV** | RZL-Format mit getrennten Soll-/Haben-Spalten, positivem Betrag, numerischem USt.-Schlüssel ✅ | aus Standard-CSV-Export per Mapping erzeugbar 🟡 | bei Stora und Store365 gleichermaßen 🟡; Store365 zusätzlich über die offene REST-API ✅ |
+| **C: Belegweise** | Monatlicher Sammelbeleg/Umsatzliste plus Belegablage; Buchung durch die Kanzlei | bei allen möglich, aber Rückschritt gegenüber heute | dito |
 
 **Wichtige Einschränkung:** Ein „DATEV-Report" ist auf den **deutschen** Kontenrahmen ausgelegt.
 Österreichische Kontenrahmen und USt.-Schlüssel weichen ab. Der Report muss also entweder
@@ -137,9 +148,9 @@ gefahren wird:
 
 | Modell | Einzug durch | Mandate | Verfügbar bei |
 | --- | --- | --- | --- |
-| **A – eigene Bank** | Hausbank über SEPA-Datei (pain.008) aus dem System | bleiben unverändert gültig | Kinnovis (SEPA-XML-Export belegt); Stora: nicht vorgesehen |
-| **B – Stripe** | Stripe, mit voller Rückmeldung ins System | portierbar, **wenn** die eigene Gläubiger-ID vor der ersten Live-Zahlung hinterlegt wird | Kinnovis und Stora |
-| **C – Hybrid (Empfehlung)** | Bestand über die Bank, Neuverträge über Stripe | keine Kundenaktion nötig | nur mit SEPA-XML, also Kinnovis |
+| **A – eigene Bank** | Hausbank über SEPA-Datei (pain.008) aus dem System | bleiben unverändert gültig | Kinnovis ✅; Store365 ❓ (in den Niederlanden ist der Bankeinzug marktüblich – gut möglich, aber unbelegt); Stora ❌ |
+| **B – Zahlungsdienstleister** | Dienstleister, mit voller Rückmeldung ins System | portierbar, **wenn** die eigene Gläubiger-ID vor der ersten Live-Zahlung hinterlegt wird | Kinnovis und Stora über Stripe ✅; Store365 über eigene Anbieterintegrationen ✅ (welche ❓) |
+| **C – Hybrid (Empfehlung)** | Bestand über die Bank, Neuverträge über den Dienstleister | keine Kundenaktion nötig | Kinnovis ✅; Store365 nur, falls Weg A bestätigt wird |
 
 **Kritischer Konfigurationspunkt:** Bei Stripe ist die Gläubiger-ID **nach der ersten Live-Zahlung
 nicht mehr änderbar** ✅. Wird versehentlich die Stripe-Gläubiger-ID verwendet, müssen alle Mandate
@@ -191,13 +202,14 @@ der Rechtsberatung abstimmen (Prüfauftrag P7 in
 
 ## 7. Kosten
 
-| Position | Kinnovis | Stora |
-| --- | --- | --- |
-| Software je Monat | ❓ nicht öffentlich, Angebot erforderlich | 99 / 149 / 299 GBP je nach Tarif ✅ (EUR-Preise separat prüfen) |
-| Einrichtung/Onboarding | ❓ | keine Setup-Gebühr ✅ |
-| Vertragsbindung | ❓ | keine Mindestlaufzeit ✅ |
-| Zahlungsentgelte | Stripe-Konditionen bzw. Bankentgelt bei SEPA-XML | Stripe-Konditionen |
-| Migrationsunterstützung | ❓ | ❓ |
+| Position | Kinnovis | Stora | Store365 |
+| --- | --- | --- | --- |
+| Software je Monat | ❓ nicht öffentlich | 99 / 149 / 299 GBP je nach Tarif ✅ | ❓ nicht öffentlich |
+| Einrichtung/Onboarding | ❓ | keine Setup-Gebühr ✅ | ❓ |
+| Vertragsbindung | ❓ | keine Mindestlaufzeit ✅ | ❓ |
+| Support | ❓ | im Tarif enthalten ✅ | **unbegrenzt und kostenlos, auf Deutsch** ✅ – im TCO-Vergleich ein realer Wert |
+| Zahlungsentgelte | Stripe bzw. Bankentgelt bei SEPA-XML | Stripe | abhängig vom Zahlungsanbieter ❓ |
+| Migrationsunterstützung | ❓ | ❓ | ❓ |
 
 **Für den TCO-Vergleich anzufordern (36 Monate):** Lizenz inkl. angekündigter Preissteigerung,
 Onboarding, Migration, alle Zusatzmodule (Facility Map, Kundenportal, Zutrittsintegration,
@@ -214,13 +226,13 @@ konkreten Tarif ist Teil der Angebotsanfrage.
 Ausführlich in [`../50_umsetzung/migration_zoho.md`](../50_umsetzung/migration_zoho.md).
 Für den Anbietervergleich zählt:
 
-| Aspekt | Kinnovis | Stora |
-| --- | --- | --- |
-| Import von Kunden, Einheiten, Verträgen | ❓ Importvorlagen anfordern | ❓ Importvorlagen anfordern |
-| Übernahme offener Posten | ❓ | ❓ |
-| **Übernahme der Zahlungsdaten/Mandate** | wenn beide Seiten Stripe nutzen, ist ein Übertrag zwischen Stripe-Konten grundsätzlich möglich – jedoch **nur bei identischer Gläubiger-ID** und nur für als PaymentMethod gespeicherte Mandate ✅ | dieselbe Bedingung ✅ |
-| Kautionen | ❓ eigenes Feld/Position nötig | ❓ |
-| Rechnungshistorie | Archivweg klären ❓ | Archivweg klären ❓ |
+| Aspekt | Kinnovis | Stora | Store365 |
+| --- | --- | --- | --- |
+| Import von Kunden, Einheiten, Verträgen | ❓ Importvorlagen anfordern | ❓ Importvorlagen anfordern | ❓; offene REST-API erleichtert den Import ✅ |
+| Übernahme offener Posten | ❓ | ❓ | ❓ |
+| **Übernahme der Mandate** | Mandate bleiben gültig, da deinPlatz Gläubiger ist; bei Stripe-Nutzung eigene Gläubiger-ID vor der ersten Live-Zahlung hinterlegen ✅ | dieselbe Bedingung ✅ | ❓ Mandatsimport erfragen |
+| Kautionen | ❓ | ❓ | ❓ |
+| Rechnungshistorie | Archivweg klären ❓ | Archivweg klären ❓ | Archivweg klären ❓ |
 
 **Nachtrag zur Mandatsfrage (geklärt am 06.09.2026):** Da die Einzüge über das eigene Bankkonto
 unter eigener Gläubiger-ID laufen, ist deinPlatz selbst Gläubiger der Mandate. Sie bleiben bei
@@ -342,29 +354,43 @@ Diese Fragen entscheiden – nicht der Funktionsumfang. Bitte in dieser Reihenfo
 | F11 | Wo liegen die Daten, gibt es einen AVV, und wie exportieren wir alles wieder? | DSGVO und Ausstieg |
 | F12 | Was kostet die Lösung in 36 Monaten – inklusive aller Module und Zahlungsentgelte? | TCO |
 
+### Zusätzliche Fragen speziell an Store365
+
+| Nr. | Frage | Warum |
+| --- | --- | --- |
+| S1 | Welche Zahlungsanbieter sind integriert, und ist ein SEPA-Einzug über unsere eigene Hausbank mit unserer Gläubiger-ID möglich? | entscheidet über den Erhalt der Bestandsmandate |
+| S2 | Welche Buchhaltungsprogramme sind konkret angebunden, und welches Exportformat erhalten wir für RZL? | wichtigste Einzelanforderung |
+| S3 | Ist die Bedienoberfläche vollständig auf Deutsch, und sind alle Kundendokumente deutschsprachig und selbst pflegbar? | Ausschlusskriterium |
+| S4 | Gibt es Referenzkunden in Österreich, und ist die österreichische Umsatzsteuer- und Rechnungslogik abgebildet? | Rechtskonformität |
+| S5 | Gibt es einen grafischen Anlageplan (Phase 2)? | Anforderung OBJ-06 |
+| S6 | Wie sieht der ISO-27001-Geltungsbereich aus, und wo werden die Daten gehostet? | belegt die Zertifizierungsaussage |
+
 ## 11. Vorläufige Bewertung
 
 Punkte 0–5 je Kriterium, gewichtet nach [`bewertungsmodell.md`](bewertungsmodell.md).
 **D2 (Kosten) und D3 (Einführbarkeit) sind noch nicht bewertbar** – dafür fehlen die Angebote.
 
-| Kriterium | Gewicht | Kinnovis | Stora | Begründung |
-| --- | --- | --- | --- | --- |
-| Zahlungswege und Mandatserhalt | **hoch** | 5 | 3 | SEPA-XML erhält Bestandsmandate ohne Kundenaktion; Stora erfordert die Umstellung auf Stripe |
-| Funktionale Abdeckung Phase 1 | hoch | 4 | 4 | beide decken den Kern ab |
-| Funktionale Abdeckung Phase 2 | mittel | 4 | 4 | beide im Standard |
-| Buchhaltung/RZL | **hoch** | 4 | 2 | DATEV-Report vs. nur Xero |
-| Sprache und AT-Rechtsraum | **hoch** | 4 | 2 | Herkunft Österreich, deutschsprachiger Auftritt |
-| Zahlungsarten und -kosten | hoch | 4 | 3 | zusätzlich SEPA-XML ohne Provider |
-| Zutrittskontrolle DACH | mittel | 5 | 3 | Sensorberg, Tapkey, eigene Lösung |
-| Preistransparenz | mittel | 2 | 5 | öffentliche Preise, keine Bindung |
-| Ertragssteuerung/dynamische Preise | niedrig | 3 | 5 | Revenue Management bei Stora stärker |
-| Ausgereiftheit Buchungsstrecke | mittel | 4 | 5 | Produktkern von Stora |
-| **Tendenz** | | **stärker** | | Vorsprung im Rechts- und Buchhaltungsteil, der für Sie am schwersten wiegt |
+| Kriterium | Gewicht | Kinnovis | Stora | Store365 | Begründung |
+| --- | --- | --- | --- | --- | --- |
+| Zahlungswege und Mandatserhalt | **hoch** | 5 | 3 | 3 (?) | SEPA-XML erhält Bestandsmandate ohne Kundenaktion; bei Store365 unbelegt, bei Stora nicht vorgesehen |
+| Funktionale Abdeckung Phase 1 | hoch | 4 | 4 | 4 | alle drei decken den Kern ab |
+| Funktionale Abdeckung Phase 2 | mittel | 4 | 4 | 3 | Anlageplan bei Store365 offen |
+| Buchhaltung/RZL | **hoch** | 4 | 2 | 3 | DATEV-Report vs. nur Xero; Store365 mit offener API und Buchhaltungsintegrationen |
+| Sprache und AT-Rechtsraum | **hoch** | 4 | 2 | 4 | Kinnovis aus Österreich, Store365 mit deutschsprachigem Support |
+| Zutrittskontrolle DACH | mittel | 5 | 3 | 4 | eigene Lösung bzw. Spezialisierung auf unbemannte Anlagen |
+| Datenschutz und Betriebssicherheit | mittel | 3 | 3 | **5** | ISO 27001, laut Anbieter einziger zertifizierter Anbieter Europas |
+| Anbieterstabilität und Erfahrung | mittel | 3 | 3 | **5** | seit 2000 am Markt, über 18 Länder |
+| Preistransparenz | mittel | 2 | 5 | 2 | öffentliche Preise nur bei Stora |
+| Ertragssteuerung/dynamische Preise | niedrig | 3 | 5 | 4 | Revenue Management bei Stora am stärksten |
+| Ausgereiftheit Buchungsstrecke | mittel | 4 | 5 | 4 | Produktkern von Stora |
+| **Tendenz** | | **knapp vorn** | | **dicht dahinter** | Kinnovis führt bei Zahlungswegen und Buchhaltung, Store365 bei Stabilität, Sicherheit und Support |
 
 ## 12. Empfehlung und nächste Schritte
 
-1. **Beide Anbieter zur Demo einladen** – die Entscheidung nicht vorwegnehmen. Stora kann über
-   Preis, Bedienung und Buchungsstrecke gewinnen, wenn die AT-Punkte belegbar erfüllt sind.
+1. **Alle drei Anbieter zur Demo einladen** – die Entscheidung nicht vorwegnehmen. Stora kann über
+   Preis, Bedienung und Buchungsstrecke gewinnen, Store365 über Verlässlichkeit, deutschsprachigen
+   Support und Datensicherheit, wenn die AT-Punkte belegbar erfüllt sind. Drei Demos in einer
+   Woche sind machbar, wenn die Termine früh reserviert werden (Woche 2).
 2. **Vor den Demos**: Musterexport für die Buchhaltung anfordern (F1) und an die Steuerberatung
    zum Testimport in RZL geben. Das ist das schnellste Ausschlusskriterium.
 3. **Parallel und sofort**: Klären, ob die Zahlungsdaten aus dem heutigen Zoho-Setup übernehmbar
@@ -373,7 +399,7 @@ Punkte 0–5 je Kriterium, gewichtet nach [`bewertungsmodell.md`](bewertungsmode
 4. **Angebote über 36 Monate** anfordern, bei Stora mit ausdrücklicher Tarifzuordnung.
 5. **Entscheidung** in der Woche nach den Demos, dokumentiert im Entscheidungslog.
 
-> Wenn sich in den Demos herausstellt, dass **beide** Anbieter die österreichische
+> Wenn sich in den Demos herausstellt, dass **alle drei** Anbieter die österreichische
 > Rechnungs- und Buchhaltungslogik nicht sauber abbilden, ist die Kombination
 > „Fachsystem für Betrieb + österreichisches Fakturierungs-/Buchhaltungssystem" der
 > nächste Prüfschritt – nicht die Aufgabe des Projektziels. Das ist in der Longlist

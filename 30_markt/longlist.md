@@ -54,9 +54,9 @@ Sie bleiben als Reserve, falls die Rückläufer zu dünn sind.
 
 ## Screening-Ergebnis
 
-**Stand 06.09.2026:** Der Auftraggeber hat die Auswahl auf **Kinnovis** und **Stora** eingegrenzt
-(Entscheidung E-04). Der Produktvergleich der beiden liegt vor:
-[`benchmark_kinnovis_stora.md`](benchmark_kinnovis_stora.md).
+**Stand 06.09.2026:** Der Auftraggeber hat die Auswahl auf **Kinnovis**, **Stora** und
+**Store365 (Store-IT B.V.)** eingegrenzt (Entscheidungen E-04 und E-09). Der Produktvergleich der drei Kandidaten liegt vor:
+[`benchmark_kinnovis_stora_store365.md`](benchmark_kinnovis_stora_store365.md).
 Die übrigen Kandidaten bleiben dokumentiert – falls beide Shortlist-Anbieter an den
 österreichischen K.o.-Kriterien scheitern (Rechnungslogik, RZL-Export, deutschsprachige
 Kundendokumente), ist Weg B aus `anbieter.csv` der nächste Prüfschritt.
@@ -70,4 +70,5 @@ Kundendokumente), ist Weg B aus `anbieter.csv` der nächste Prüfschritt.
 | selfstorage.team | | | |
 | Stora | | | |
 | 6Storage | | | |
+| Store365 (Store-IT) | | | |
 | Weg B (Vergleichsangebot) | | | |

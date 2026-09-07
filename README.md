@@ -35,7 +35,7 @@ realistisch (siehe [Projektauftrag](00_management/projektauftrag.md), Abschnitt 
 | Marktrecherche (Desk Research) | ✅ Erstfassung, siehe [`30_markt/marktueberblick.md`](30_markt/marktueberblick.md) |
 | Ist-Zustand Bestandssystem | ✅ Zoho Subscriptions dokumentiert ([`10_analyse/ist_zustand_zoho.md`](10_analyse/ist_zustand_zoho.md)), Detailerhebung Woche 1 offen |
 | Anforderungskatalog | ✅ Version 0.2 mit Phasen 1/2 aus dem Kundendokument, Freigabe Woche 2 |
-| Shortlist | ✅ Kinnovis und Stora, Benchmark liegt vor ([`30_markt/benchmark_kinnovis_stora.md`](30_markt/benchmark_kinnovis_stora.md)) |
+| Shortlist | ✅ Kinnovis, Stora und Store365 (Store-IT), Benchmark liegt vor ([`30_markt/benchmark_kinnovis_stora_store365.md`](30_markt/benchmark_kinnovis_stora_store365.md)) |
 | Migrationskonzept Zoho | ✅ Entwurf ([`50_umsetzung/migration_zoho.md`](50_umsetzung/migration_zoho.md)); Mandatsfrage offen |
 | Projektplan mit Terminen | ✅ Go-Live **Fr 30.10.2026**, Word-Fassung in [`00_management/projektplan_umstellung_kernsystem.docx`](00_management/projektplan_umstellung_kernsystem.docx) |
 | Anbieterentscheidung | ⬜ **spätestens Fr 09.10.2026** (Meilenstein M5) |
