@@ -45,6 +45,8 @@ ABR-14;Abrechnung & Zahlung;Zahlungsart je Vertrag frei waehlbar (SEPA-Lastschri
 ABR-15;Abrechnung & Zahlung;SEPA-Einzugsdatei (pain.008) fuer den Upload in das eigene Electronic Banking erzeugen;Muss;ja;Erzeugt das System eine Einzugsdatei fuer unsere Hausbank unter unserer Glaeubiger-ID?;1
 ABR-16;Abrechnung & Zahlung;Import bestehender SEPA-Mandate inkl. IBAN, Mandatsreferenz und Erteilungsdatum;Muss;ja;Koennen wir unsere bestehenden Mandate importieren, ohne sie neu einzuholen?;1
 ABR-17;Abrechnung & Zahlung;Bestandskunden und Neukunden koennen dauerhaft unterschiedliche Zahlungswege nutzen (Bank und Zahlungsdienstleister parallel);Soll;nein;Laufen Bank-Lastschrift und Dienstleister-Einzug dauerhaft parallel?;1
+ABR-18;Abrechnung & Zahlung;Mandatsaenderung bei Glaeubigerwechsel: bisherige Glaeubiger-ID und Mandatsreferenz werden als Aenderungsangabe im Einzug mitgegeben;Muss;ja;Unterstuetzt das System den Glaeubigerwechsel ohne Neueinholung der Mandate?;1
+ABR-19;Abrechnung & Zahlung;Zahlungstext, Verwendungszweck und Referenz konfigurierbar, sodass eingehende Zahlungen automatisch zugeordnet werden;Muss;nein;Wie muessen Zahlungstexte gestaltet sein, damit die Zuordnung automatisch gelingt?;1
 MAH-01;Mahnwesen;Regelbasierte Mahnstufen mit Fristen, Textvorlagen und automatischem Versand;Muss;ja;Bitte den konfigurierten Mahnlauf zeigen.;1
 MAH-02;Mahnwesen;Mahnspesen und Verzugszinsen automatisch berechnen;Soll;nein;Wie werden Mahnspesen hinterlegt?;1
 MAH-03;Mahnwesen;Automatische Zutrittssperre ab definierter Mahnstufe (ueber Zutrittsschnittstelle);Soll;nein;Wie wird die Sperre technisch ausgeloest und wieder aufgehoben?;2

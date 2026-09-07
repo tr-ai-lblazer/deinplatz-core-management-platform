@@ -1,0 +1,8 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Projektüberblick und Dokumente
+    url: https://github.com/tr-ai-lblazer/deinplatz-core-management-platform#readme
+    about: Struktur des Repositorys, Stand des Projekts und alle Arbeitsdokumente.
+  - name: Arbeitsweise im Projekt
+    url: https://github.com/tr-ai-lblazer/deinplatz-core-management-platform/blob/main/CONTRIBUTING.md
+    about: Wie wir Issues, Labels, Meilensteine und Pull Requests verwenden.

@@ -1,6 +1,11 @@
 # 8-Wochen-Plan: Auswahl und Einführung
 
-Stand: 06.09.2026 · Version 0.2 · **Termine fixiert: Projektstart Mo 07.09.2026, Go-Live Fr 30.10.2026**
+Stand: 07.09.2026 · Version 0.3 · **Projektstart Mo 07.09.2026, Go-Live So 01.11.2026**
+
+> **Geändert nach dem Stakeholder-Termin vom 07.09.2026 (Beschlüsse B2/B3):** Der Go-Live liegt
+> auf dem **1. November**; danach folgt eine Absicherungsphase, in der Zoho als Vergleichs- und
+> Rückfallstand verfügbar bleibt – bis zum Jahreswechsel, längstens bis Januar 2027.
+> Regeln dazu: [`../50_umsetzung/parallelbetrieb_und_sundown.md`](../50_umsetzung/parallelbetrieb_und_sundown.md).
 
 > **Ausführliche Fassung für die Geschäftsführung:** [`projektplan_umstellung_kernsystem.docx`](projektplan_umstellung_kernsystem.docx)
 > – mit Meilensteinen samt spätesten Terminen, kritischem Pfad, Balkenplan, Rückwärtsrechnung,
@@ -17,11 +22,15 @@ Stand: 06.09.2026 · Version 0.2 · **Termine fixiert: Projektstart Mo 07.09.202
 | W5 | KW 41 | 05.–09.10.2026 | **M5 Anbieter beauftragt – kritischster Termin** |
 | W6 | KW 42 | 12.–16.10.2026 | M6 Konfiguration und Migrationstest 1 |
 | W7 | KW 43 | 19.–23.10.2026 | M7 Abnahme und Go-/No-Go |
-| W8 | KW 44 | 26.–30.10.2026 | M8 Go-Live |
+| W8 | KW 44 | 26.–30.10.2026 | Datenübernahme und Freigabe |
+| — | KW 45 | **01.11.2026** | **M8 Go-Live** (Stichtag Sonntag, operativer Start Mo 02.11.) |
+| — | Nov/Dez | bis 31.12.2026 | M9 Parallelbetrieb, drei Abgleichtermine |
+| — | Januar | bis 31.01.2027 | M10 Sundown Zoho und Langzeitarchivierung |
 
-**Kalenderbesonderheit:** Montag, 26.10.2026 ist Nationalfeiertag – die Cutover-Woche hat nur
-vier Arbeitstage. Der Cutover läuft daher Di 27.10. (Migration), Mi 28.10. (Go-Live),
-Do 29.10. (Abrechnungslauf November), Fr 30.10. (Zahlungslauf und Hypercare).
+**Kalenderbesonderheiten:** Montag, 26.10.2026 ist Nationalfeiertag; Sonntag, 01.11.2026 ist
+Allerheiligen. Der Cutover läuft daher Di 27.10. bis Fr 30.10. (Migration, Abgleich, Freigabe,
+Datenannahmestopp in Zoho), der **Stichtag ist der 01.11.**, der operative Start Montag, 02.11.
+Der erste Abrechnungslauf für November erfolgt in der Woche ab 02.11. im Vier-Augen-Prinzip.
 
 ## Phasenlogik
 

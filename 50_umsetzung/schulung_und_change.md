@@ -34,12 +34,26 @@ fünf Personen ab Tag 1 damit sicher arbeiten. Entsprechend knapp und praxisnah 
 
 ## 4. Kundenkommunikation
 
+**Beschluss vom 07.09.2026 (E-13):** Die rund 250 Kundinnen und Kunden werden **einmal**
+informiert – als reine Info-Mail, ohne Aufforderung zu einer neuen Unterschrift. Damit sollen
+weder eine doppelte Ansprache wegen System- und Gesellschaftswechsel noch unnötige
+Verlängerungs- oder Kündigungsentscheidungen ausgelöst werden.
+
 | Zeitpunkt | Inhalt | Kanal |
 | --- | --- | --- |
-| 2 Wochen vor Go-Live | Ankündigung der Umstellung, Nutzen für Kundinnen und Kunden, Ansprechpartner | E-Mail + Aushang |
-| Go-Live | Zugang zum Kundenportal, geänderte Rechnungsoptik, unveränderte Bankdaten/Zahlungsweise (bzw. neue Mandate) | E-Mail |
-| Erste Rechnung | Kurzer Hinweis auf das neue Format und auf die Kontaktmöglichkeit bei Fragen | in der Rechnungsmail |
-| Bei Mandatsneueinholung | Formular oder Online-Strecke mit klarer Frist und Erinnerung | E-Mail + Nachfassen telefonisch |
+| 2 Wochen vor Go-Live | **Ein** Schreiben: Umstellung des Systems und – sofern zeitlich passend – der Wechsel zur GmbH; Kernbotschaft: „Ihre Zahlung läuft weiter, Sie müssen nichts tun" | E-Mail + Aushang |
+| Go-Live | nur bei Bedarf: Zugang zum Kundenportal und geänderte Rechnungsoptik | E-Mail |
+| Erste Rechnung | Kurzer Hinweis auf das neue Format und die Kontaktmöglichkeit | in der Rechnungsmail |
+| Nur falls Mandate doch neu eingeholt werden müssen | Formular oder Online-Strecke mit Frist und Erinnerung | E-Mail + telefonisches Nachfassen |
+| Preisanpassung zum 01.01.2027 | eigenes Schreiben mit eigener Frist und Begründung | E-Mail/Post |
+
+### Warum die Preisanpassung getrennt bleiben sollte
+
+Die Bündelung spart einen Kontakt, verbindet aber zwei Botschaften mit sehr unterschiedlicher
+Wirkung: Die Umstellung ist für Kundinnen und Kunden folgenlos, die Preisanpassung nicht.
+Ein Schreiben, das beides mischt, lenkt die Aufmerksamkeit auf den Preis und lädt zur Kündigung
+ein – gerade bei monatlich kündbaren Verträgen. Empfehlung: Umstellung und Gläubigerwechsel in
+einem neutralen Info-Schreiben, die Preisanpassung mit zeitlichem Abstand. Entscheidung offen als O-15.
 
 **Ton:** sachlich, kurz, kein IT-Vokabular. Für Kundinnen und Kunden zählt nur:
 Ändert sich mein Zutritt, mein Preis, meine Zahlung? Antwort möglichst: nein.

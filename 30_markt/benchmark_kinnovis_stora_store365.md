@@ -1,6 +1,6 @@
 # Benchmark: Kinnovis, Stora und Store365 (Store-IT)
 
-Stand: 06.09.2026 · Version 1.1 (Store365 ergänzt) · Bezug: Anforderungsdokument „Umstellung Software deinPlatz v1" (Phase 1/2)
+Stand: 07.09.2026 · Version 1.2 (Store365 ergänzt, Konditionen aus dem Stakeholder-Termin) · Bezug: Anforderungsdokument „Umstellung Software deinPlatz v1" (Phase 1/2)
 
 > **Ergänzender Report:** Die Zahlungsabwicklung ist in einem eigenen Report für die
 > Geschäftsführung vertieft: [`benchmark_kinnovis_stora_store365_zahlungsabwicklung.docx`](benchmark_kinnovis_stora_store365_zahlungsabwicklung.docx)
@@ -161,17 +161,26 @@ Bar, Scheck) im System **von Hand als bezahlt markiert** werden ✅ – für die
 entsteht kein Automatisierungsgewinn. Ob eines der Systeme einen Kontoauszug (CAMT.053/MT940)
 einlesen kann, ist bei beiden offen ❓ und in den Demos zu klären (Anforderung BUH-04).
 
-Rechenbeispiel (`ANNAHME`: 120 aktive Verträge, Ø 100 € Monatsmiete, 12.000 € Monatsumsatz;
-Stripe-Listenpreise Österreich: europäische Karten 1,5 % + 0,25 €, SEPA-Lastschrift 0,35 € pauschal ✅):
+Rechenbeispiel (rund **250 aktive Verträge**, `ANNAHME` 100 € Monatsmiete, 25.000 € Monatsumsatz;
+Stripe-Listenpreise Österreich: europäische Karten 1,5 % + 0,25 €, SEPA-Lastschrift 0,35 € pauschal ✅;
+zusätzlich die im Stakeholder-Termin genannte Plattformgebühr von 0,7 % auf den abgewickelten Umsatz):
 
 | Szenario | Kosten je Monat | Kosten je Jahr |
 | --- | --- | --- |
-| Alles über Karte | 12.000 × 1,5 % + 120 × 0,25 € = **210 €** | **2.520 €** |
-| Alles über SEPA-Lastschrift (Stripe) | 120 × 0,35 € = **42 €** | **504 €** |
-| Alles über Bank-Lastschrift (SEPA-XML, nur Kinnovis) | Bankentgelt, meist unter 20 € | **~240 €** |
+| Alles über Karte | 25.000 × 1,5 % + 250 × 0,25 € = **437,50 €** | **5.250 €** |
+| Alles über SEPA-Lastschrift beim Dienstleister, inkl. 0,7 % Plattformgebühr | 250 × 0,35 € + 175 € = **262,50 €** | **3.150 €** |
+| Alles über SEPA-Lastschrift beim Dienstleister, ohne Plattformgebühr | 250 × 0,35 € = **87,50 €** | **1.050 €** |
+| Alles über Bank-Lastschrift (SEPA-XML, nur Kinnovis) | Bankentgelt, meist unter 60 € | **300 bis 900 €** |
+
+> **Wichtig zur Plattformgebühr:** Die im Termin genannten **0,7 % des abgewickelten Umsatzes**
+> sind keine Stripe-Kondition – Stripe verrechnet SEPA pauschal mit 0,35 €. Ein umsatzabhängiger
+> Aufschlag ist typischerweise eine Gebühr des Softwareanbieters, der Stripe im Hintergrund
+> einsetzt. Sie gehört damit zum **Lizenzmodell** und ist in der Demo zu klären (offene Frage O-13).
+> Bei 25.000 € Monatsumsatz sind das rund 2.100 € pro Jahr – mehr als manche Softwarelizenz.
 
 Die Zahlungsentgelte übersteigen bei Kartendominanz die Softwarekosten. **Konsequenz für die
-Konfiguration – unabhängig vom Anbieter: SEPA-Lastschrift als Standard, Karte als Ausweichoption.**
+Konfiguration – unabhängig vom Anbieter: SEPA-Lastschrift als Standard, Karte als Ausweichoption,
+und der Bestand bleibt beim Einzug über die eigene Bank** (Beschluss E-12 vom 07.09.2026).
 Das deckt sich mit Ihrer Anforderung „Zahlung auswählbar", verschiebt aber die Voreinstellung.
 
 ### 6.3 Sprache und österreichische Rechnungslogik

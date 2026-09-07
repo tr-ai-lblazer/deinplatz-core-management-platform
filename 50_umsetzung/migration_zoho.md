@@ -5,9 +5,19 @@ Ausgangslage: [`../10_analyse/ist_zustand_zoho.md`](../10_analyse/ist_zustand_zo
 
 ## 1. Mandate und IBAN – Sachstand nach Klärung
 
-**Ausgangslage (bestätigt durch den Auftraggeber, 06.09.2026):** Die Einzüge erfolgen heute als
+**Ausgangslage (bestätigt durch den Auftraggeber, 06./07.09.2026):** Die Einzüge erfolgen heute als
 SEPA-Lastschrift über das **eigene Bankkonto** von deinPlatz, unter **eigener Gläubiger-ID**;
-ein Teil der Kunden zahlt per Überweisung. Die Konsolidierung in Zoho erfolgt weitgehend von Hand.
+ein Teil der rund **250 aktiven Kunden** zahlt per Überweisung. Die Konsolidierung in Zoho
+erfolgt weitgehend von Hand.
+
+> **Neu seit dem Stakeholder-Termin vom 07.09.2026:** Der geplante Wechsel vom Einzelunternehmen
+> zur **GmbH** stellt die Mandatslage in einem Punkt neu. Wechselt der Rechtsträger, wechselt der
+> Gläubiger – und damit in der Regel auch die Gläubiger-ID. Das SEPA-Verfahren sieht für diesen
+> Fall die **Mandatsänderung** vor: Beim ersten Einzug unter der neuen Gläubiger-ID werden die
+> bisherige Gläubiger-ID und Mandatsreferenz als Änderungsangabe mitgegeben, die
+> Zahlungspflichtigen werden vorab informiert; neue Unterschriften sind dann in der Regel nicht
+> erforderlich. Ob dieser Weg hier greift, klären Bank und Steuerberatung (offene Frage O-12).
+> Das Zielsystem muss die Änderungsangaben abbilden können – Anforderung **ABR-18**, K.o.-Kriterium.
 
 Damit entfällt das zuvor größte Migrationsrisiko: **deinPlatz ist selbst Gläubiger der Mandate.**
 Ein Mandat wird durch die Kombination aus Gläubiger-ID und Mandatsreferenz identifiziert; solange
@@ -135,6 +145,13 @@ Ergänzend zu den Kriterien in [`datenmigration.md`](datenmigration.md):
       oder zu schließen ist
 - [ ] Löschung der Daten bei Zoho nach Ablauf der Aufbewahrungspflicht beauftragen
 - [ ] Zugriff auf das Archiv geregelt (wer, wie, wo)
+
+## 7a. Anschluss an den Parallelbetrieb
+
+Der Cutover endet nicht mit dem Go-Live: Zoho bleibt nach Beschluss des Stakeholder-Termins bis
+zum Jahreswechsel, längstens bis Januar 2027, als Vergleichs- und Rückfallstand verfügbar.
+Regeln, Abgleichtermine, Sundown und Langzeitarchivierung stehen in
+[`parallelbetrieb_und_sundown.md`](parallelbetrieb_und_sundown.md).
 
 ## 8. Reihenfolge der Arbeitspakete
 

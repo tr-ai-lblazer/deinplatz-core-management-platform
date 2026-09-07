@@ -1,7 +1,7 @@
 # Ist-Zustand: Zoho Subscriptions als heutiges Kernsystem
 
-Quelle: Anforderungsdokument „Umstellung Software deinPlatz v1" (06.09.2026, P. Allan) sowie
-mündliche Angaben. Ersetzt die bisherigen `ANNAHME`-Aussagen zum Bestandssystem.
+Quellen: Anforderungsdokument „Umstellung Software deinPlatz v1" (06.09.2026, P. Allan) sowie
+Stakeholder-Termin vom 07.09.2026 ([Protokoll](../00_management/protokolle/2026-09-07_stakeholder_termin.md)). Ersetzt die bisherigen `ANNAHME`-Aussagen zum Bestandssystem.
 
 ## 1. Systemlandschaft heute
 
@@ -10,6 +10,8 @@ mündliche Angaben. Ersetzt die bisherigen `ANNAHME`-Aussagen zum Bestandssystem
 | Kundenverwaltung, Verträge, Fakturierung | **Zoho Subscriptions** (heute unter dem Namen Zoho Billing geführt) | Kein Self-Storage-Fachsystem. Zum Einrichtungszeitpunkt die am besten passende verfügbare Lösung – die Grenzen sind heute erreicht |
 | Ergänzende Kundenverwaltung | Dateiablage in **OneDrive** | Parallelführung; soll mit der Umstellung entfallen (siehe Frage 2 im Benchmark) |
 | Buchhaltung | Steuerberatung mit **RZL** | Schnittstelle zu RZL ist die wichtigste Einzelanforderung |
+| Bestand | **rund 250 aktive Kundinnen und Kunden** (Stand 07.09.2026) | bestimmt Migrationsumfang und Kommunikationsaufwand |
+| Rechtsform | Wechsel vom **Einzelunternehmen zur GmbH** geplant | betrifft Gläubiger-ID und SEPA-Mandate, siehe offene Frage O-12 |
 | Zahlungsabwicklung | **SEPA-Lastschrift über das eigene Bankkonto unter eigener Gläubiger-ID, ergänzt um Überweisungen; keine Kartenzahlung** (bestätigt 06.09.2026) | Mandate gehören deinPlatz und bleiben bei einem Softwarewechsel gültig |
 | Zutrittskontrolle | ❓ Hersteller/Modell zu erheben | bestimmt die Integrationsmöglichkeit |
 | Website | vorhanden (deinplatz.at) | Buchungsstrecke soll eingebunden, die Website nicht ersetzt werden |

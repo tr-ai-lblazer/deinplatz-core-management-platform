@@ -1,0 +1,50 @@
+name: Entscheidungsbedarf
+description: Eine Frage, die entschieden werden muss, bevor es weitergeht.
+title: "[Entscheidung] "
+labels: ["entscheidung"]
+body:
+  - type: textarea
+    id: frage
+    attributes:
+      label: Zu entscheidende Frage
+      placeholder: "Werden die bestehenden SEPA-Mandate auf die GmbH übertragen oder neu eingeholt?"
+    validations:
+      required: true
+  - type: textarea
+    id: optionen
+    attributes:
+      label: Optionen mit Vor- und Nachteilen
+      value: |
+        **Option A:** 
+        - dafür: 
+        - dagegen: 
+
+        **Option B:** 
+        - dafür: 
+        - dagegen: 
+    validations:
+      required: true
+  - type: textarea
+    id: empfehlung
+    attributes:
+      label: Empfehlung
+      description: Welche Option wird vorgeschlagen und warum?
+  - type: input
+    id: entscheider
+    attributes:
+      label: Entscheidet
+      placeholder: "Geschäftsführung"
+    validations:
+      required: true
+  - type: input
+    id: benoetigt_bis
+    attributes:
+      label: Benötigt bis
+      description: Format TT.MM.JJJJ – und was passiert bei Verzug?
+    validations:
+      required: true
+  - type: markdown
+    attributes:
+      value: |
+        **Nach der Entscheidung:** Ergebnis hier kommentieren, Issue schließen und den Eintrag in
+        `00_management/entscheidungslog.md` ergänzen. Das Entscheidungslog bleibt die verbindliche Quelle.

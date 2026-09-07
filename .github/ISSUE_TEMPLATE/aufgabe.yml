@@ -1,0 +1,54 @@
+name: Aufgabe / Arbeitspaket
+description: Eine konkrete Aufgabe im Projekt – aus dem Projektplan, einem Termin oder dem Tagesgeschäft.
+title: "[Aufgabe] "
+labels: ["aufgabe"]
+body:
+  - type: textarea
+    id: ziel
+    attributes:
+      label: Ziel
+      description: Was soll am Ende vorliegen? Ein Satz.
+      placeholder: "Die Mandatsliste aller aktiven Verträge liegt vollständig vor."
+    validations:
+      required: true
+  - type: textarea
+    id: hintergrund
+    attributes:
+      label: Hintergrund und Kontext
+      description: Warum ist das nötig? Verweise auf Dokumente im Repository sind willkommen.
+      placeholder: "Siehe 50_umsetzung/migration_zoho.md, Abschnitt 1."
+  - type: textarea
+    id: schritte
+    attributes:
+      label: Schritte
+      description: Was ist konkret zu tun?
+      value: |
+        - [ ] 
+        - [ ] 
+  - type: textarea
+    id: fertig
+    attributes:
+      label: Fertig, wenn
+      description: Woran erkennen wir, dass die Aufgabe erledigt ist?
+      placeholder: "Liste mit IBAN, Mandatsreferenz und Erteilungsdatum je aktivem Vertrag, geprüft von der Fachverantwortung Finanzen."
+    validations:
+      required: true
+  - type: input
+    id: verantwortlich
+    attributes:
+      label: Verantwortlich
+      description: Name der Person, die die Aufgabe treibt (zusätzlich als Assignee eintragen).
+  - type: input
+    id: termin
+    attributes:
+      label: Termin
+      description: Bis wann? Format TT.MM.JJJJ
+  - type: dropdown
+    id: kritisch
+    attributes:
+      label: Liegt die Aufgabe auf dem kritischen Pfad?
+      options:
+        - "nein"
+        - "ja – Verzug verschiebt den Go-Live"
+    validations:
+      required: true

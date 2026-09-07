@@ -1,0 +1,41 @@
+name: Risiko
+description: Ein Risiko, das den Termin, die Kosten oder die Qualität gefährden kann.
+title: "[Risiko] "
+labels: ["risiko"]
+body:
+  - type: textarea
+    id: risiko
+    attributes:
+      label: Risiko
+      description: Was kann passieren?
+    validations:
+      required: true
+  - type: textarea
+    id: wirkung
+    attributes:
+      label: Wirkung, wenn es eintritt
+    validations:
+      required: true
+  - type: dropdown
+    id: eintritt
+    attributes:
+      label: Eintrittswahrscheinlichkeit
+      options: ["1 – sehr gering", "2 – gering", "3 – mittel", "4 – hoch", "5 – sehr hoch"]
+    validations:
+      required: true
+  - type: dropdown
+    id: auswirkung
+    attributes:
+      label: Auswirkung
+      options: ["1 – gering", "2", "3 – spürbar", "4", "5 – Projekt gefährdet"]
+    validations:
+      required: true
+  - type: textarea
+    id: massnahme
+    attributes:
+      label: Gegenmaßnahme und Frühwarnzeichen
+    validations:
+      required: true
+  - type: markdown
+    attributes:
+      value: "Bitte zusätzlich in `00_management/risikoregister.md` aufnehmen und die Risiko-ID hier eintragen."

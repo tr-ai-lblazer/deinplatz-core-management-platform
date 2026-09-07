@@ -1,0 +1,12 @@
+# Wer wird automatisch zur Prüfung angefragt?
+# GitHub-Benutzernamen bitte eintragen, sobald sie feststehen.
+# Beispiel: *  @peter  @martin
+
+# Gesamtes Repository
+# *                     @peter @martin
+
+# Projektsteuerung und Entscheidungen
+# /00_management/       @peter
+
+# Umsetzung, Migration und Cutover
+# /50_umsetzung/        @martin

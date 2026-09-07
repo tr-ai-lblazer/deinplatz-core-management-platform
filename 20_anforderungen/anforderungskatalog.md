@@ -130,6 +130,8 @@ und hier liegt das größte Fehlerrisiko bei der Migration (Stichtage, offene Po
 | ABR-15 | SEPA-Einzugsdatei (pain.008) fuer den Upload in das eigene Electronic Banking erzeugen | Muss | 1 | **ja** | Erzeugt das System eine Einzugsdatei fuer unsere Hausbank unter unserer Glaeubiger-ID? |
 | ABR-16 | Import bestehender SEPA-Mandate inkl. IBAN, Mandatsreferenz und Erteilungsdatum | Muss | 1 | **ja** | Koennen wir unsere bestehenden Mandate importieren, ohne sie neu einzuholen? |
 | ABR-17 | Bestandskunden und Neukunden koennen dauerhaft unterschiedliche Zahlungswege nutzen (Bank und Zahlungsdienstleister parallel) | Soll | 1 | – | Laufen Bank-Lastschrift und Dienstleister-Einzug dauerhaft parallel? |
+| ABR-18 | Mandatsaenderung bei Glaeubigerwechsel: bisherige Glaeubiger-ID und Mandatsreferenz werden als Aenderungsangabe im Einzug mitgegeben | Muss | 1 | **ja** | Unterstuetzt das System den Glaeubigerwechsel ohne Neueinholung der Mandate? |
+| ABR-19 | Zahlungstext, Verwendungszweck und Referenz konfigurierbar, sodass eingehende Zahlungen automatisch zugeordnet werden | Muss | 1 | – | Wie muessen Zahlungstexte gestaltet sein, damit die Zuordnung automatisch gelingt? |
 <!-- ENDE -->
 
 ## 7. Mahnwesen (MAH)
@@ -216,5 +218,6 @@ dokumentiert.
 | Version | Datum | Änderung | Autor |
 | --- | --- | --- | --- |
 | 0.1 | 06.09.2026 | Erstentwurf auf Basis Marktrecherche und Branchenstandard | Beratung |
+| 0.4 | 07.09.2026 | Aus dem Stakeholder-Termin: ABR-18 (Mandatsänderung bei Gläubigerwechsel, K.o.) und ABR-19 (Zahlungstexte für die automatische Zuordnung) ergänzt | Beratung |
 | 0.3 | 06.09.2026 | Zahlungswege praezisiert: ABR-15 (SEPA-XML), ABR-16 (Mandatsimport), ABR-17 (parallele Zahlungswege) neu; BUH-04 auf „Muss" gehoben | Beratung |
 | 0.2 | 06.09.2026 | Kundendokument eingearbeitet: Phasenspalte, RZL in BUH-01, neue Anforderungen OBJ-06, BUC-05, VER-07, VER-08, ABR-13, ABR-14, BUH-05; ABR-05 auf „Muss" gehoben | Beratung |

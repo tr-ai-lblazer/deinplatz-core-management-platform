@@ -1,0 +1,36 @@
+name: Frage an einen Anbieter
+description: Eine Frage, die Kinnovis, Stora oder Store365 vor oder in der Demo beantworten muss.
+title: "[Anbieterfrage] "
+labels: ["anbieterfrage"]
+body:
+  - type: dropdown
+    id: anbieter
+    attributes:
+      label: Anbieter
+      multiple: true
+      options: ["Kinnovis", "Stora", "Store365 (Store-IT)", "alle drei"]
+    validations:
+      required: true
+  - type: textarea
+    id: frage
+    attributes:
+      label: Frage
+      description: So formuliert, wie sie gestellt wird.
+    validations:
+      required: true
+  - type: input
+    id: anforderung
+    attributes:
+      label: Bezug zur Anforderung
+      placeholder: "ABR-15, BUH-01"
+  - type: textarea
+    id: warum
+    attributes:
+      label: Warum die Frage entscheidungsrelevant ist
+    validations:
+      required: true
+  - type: textarea
+    id: antwort
+    attributes:
+      label: Antwort des Anbieters
+      description: Wird nach der Demo eingetragen – mit Datum und Quelle (Demo, E-Mail, Angebot).
