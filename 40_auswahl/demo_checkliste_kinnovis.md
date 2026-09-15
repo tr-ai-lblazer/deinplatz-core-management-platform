@@ -6,6 +6,11 @@ Version 0.2 (Entwurf, Stand 11.09.2026) · Grundlage für Aufgabe A1 aus dem
 
 > **Zu ergänzen vor dem Versand:** Termin, Dauer, Teilnehmende auf beiden Seiten.
 
+> **Druckfassung zum Ausfüllen im Termin:**
+> [`fragenkatalog_kinnovis_demo.docx`](fragenkatalog_kinnovis_demo.docx) – gleicher Inhalt mit
+> Antwortfeldern, Ankreuzkästchen für die K.o.-Fragen und Bewertungsbogen. Dieses Markdown-Dokument
+> bleibt die führende Fassung; nach dem Termin werden die Antworten hier eingetragen.
+
 ## 0. Vorbemerkung zum Vorgehen
 
 **Grundsatz:** Was nicht live im System gezeigt oder schriftlich zugesagt wird, gilt als nicht
