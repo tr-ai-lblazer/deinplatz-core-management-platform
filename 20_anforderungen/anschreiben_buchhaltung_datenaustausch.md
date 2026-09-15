@@ -4,6 +4,10 @@ Entwurf vom 11.09.2026 · Aufgabe A4 aus dem Stakeholder-Termin, Issue
 [#5](https://github.com/tr-ai-lblazer/deinplatz-core-management-platform/issues/5)
 · Empfänger: Sepp, in Kopie Pickerle bzw. Frau Tarmann
 
+**Zum Versenden:** [`anschreiben_buchhaltung_datenaustausch.eml`](anschreiben_buchhaltung_datenaustausch.eml)
+– Doppelklick öffnet die Nachricht in Outlook direkt im Verfassen-Modus (ohne Empfänger,
+Adresse einfach eintragen). Alternativ den Text unten kopieren.
+
 **Zweck:** Die Antworten sind die Vorgabe für die Konfiguration des Buchhaltungsexports
 (Anforderungen BUH-01, BUH-02, BUH-05) und die Grundlage für den Testimport des Musterexports
 in RZL vor der Kinnovis-Demo.

@@ -1,0 +1,107 @@
+Subject: Neues Verwaltungssystem ab 1. November =?utf-8?q?=E2=80=93_wie_soll?=
+ =?utf-8?q?_die_=C3=9Cbergabe?= an die Buchhaltung aussehen?
+From: peter.allan@accilium.com
+X-Unsent: 1
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="===============1148276478607081221=="
+
+--===============1148276478607081221==
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+
+Hallo Sepp,
+
+wir l=C3=B6sen bei deinPlatz unser bisheriges System (Zoho) ab und stellen zu=
+m 1. November auf eine Self-Storage-Software um. Das neue System soll die mon=
+atliche =C3=9Cbergabe an die Buchhaltung m=C3=B6glichst automatisch erledigen=
+ =E2=80=93 idealerweise als Datei, die du direkt in RZL einliest.
+
+Damit wir das richtig einrichten und nicht raten, br=C3=A4uchte ich von dir k=
+urz folgende Angaben. Stichworte gen=C3=BCgen:
+
+1. Format: Welches Importformat sollen wir liefern =E2=80=93 das RZL-eigene C=
+SV oder das DATEV-Format? Gibt es dazu eine Feldbeschreibung?
+2. Musterdatei: Kannst du mir eine Datei schicken, die schon einmal sauber in=
+ RZL eingelesen wurde? Das ist f=C3=BCr uns die verl=C3=A4sslichste Vorlage.
+3. Konten: Welche Erl=C3=B6skonten sollen wir verwenden =E2=80=93 f=C3=BCr di=
+e Lagermiete, f=C3=BCr Zusatzleistungen (Versicherung, Schl=C3=B6sser, Karton=
+s) und f=C3=BCr Mahnspesen?
+4. Umsatzsteuer: Welche Steuers=C3=A4tze und Steuerschl=C3=BCssel geh=C3=B6re=
+n zu diesen Positionen?
+5. Kautionen: Wir gehen davon aus, dass sie als durchlaufender Posten gef=C3=
+=BChrt werden =E2=80=93 auf welchem Konto?
+6. Zahlungsdienstleister: Falls wir k=C3=BCnftig Kartenzahlung anbieten, komm=
+t das Geld nicht einzeln, sondern etwa alle sieben Tage als Sammel=C3=BCberwe=
+isung abz=C3=BCglich Geb=C3=BChren auf das Konto. Wie sollen wir Auszahlung u=
+nd Geb=C3=BChren buchen, damit es f=C3=BCr dich stimmt?
+7. Ablauf: Monatlich reicht vermutlich =E2=80=93 auf welchem Weg bekommst du =
+die Datei am liebsten, und brauchst du die Rechnungs-PDFs zus=C3=A4tzlich ode=
+r gen=C3=BCgt der Buchungsstapel?
+
+Und eine Bitte mit etwas Zeitdruck: Wir bekommen vom Softwareanbieter demn=C3=
+=A4chst einen Musterexport. K=C3=B6nntest du den testweise in RZL einlesen, b=
+evor wir uns endg=C3=BCltig entscheiden? Wenn das nicht funktioniert, ist das=
+ f=C3=BCr uns ein Ausschlusskriterium =E2=80=93 und das wollen wir vorher wis=
+sen, nicht nachher.
+
+Wenn es dir schneller geht, telefonieren wir kurz; ich schreibe die Antworten=
+ dann mit.
+
+Danke dir und beste Gr=C3=BC=C3=9Fe
+Peter
+
+--===============1148276478607081221==
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+<html><body style=3D"font-family:Calibri,Arial,sans-serif;font-size:11pt">
+<p>Hallo Sepp,</p>
+<p>wir l=C3=B6sen bei deinPlatz unser bisheriges System (Zoho) ab und stellen=
+ zum 1. November auf eine
+Self-Storage-Software um. Das neue System soll die monatliche =C3=9Cbergabe a=
+n die Buchhaltung m=C3=B6glichst
+automatisch erledigen =E2=80=93 idealerweise als Datei, die du direkt in RZL =
+einliest.</p>
+<p>Damit wir das richtig einrichten und nicht raten, br=C3=A4uchte ich von di=
+r kurz folgende Angaben.
+Stichworte gen=C3=BCgen:</p>
+<ol>
+<li><b>Format:</b> Welches Importformat sollen wir liefern =E2=80=93 das RZL-=
+eigene CSV oder das DATEV-Format?
+Gibt es dazu eine Feldbeschreibung?</li>
+<li><b>Musterdatei:</b> Kannst du mir eine Datei schicken, die schon einmal s=
+auber in RZL eingelesen
+wurde? Das ist f=C3=BCr uns die verl=C3=A4sslichste Vorlage.</li>
+<li><b>Konten:</b> Welche Erl=C3=B6skonten sollen wir verwenden =E2=80=93 f=
+=C3=BCr die Lagermiete, f=C3=BCr Zusatzleistungen
+(Versicherung, Schl=C3=B6sser, Kartons) und f=C3=BCr Mahnspesen?</li>
+<li><b>Umsatzsteuer:</b> Welche Steuers=C3=A4tze und Steuerschl=C3=BCssel geh=
+=C3=B6ren zu diesen Positionen?</li>
+<li><b>Kautionen:</b> Wir gehen davon aus, dass sie als durchlaufender Posten=
+ gef=C3=BChrt werden =E2=80=93 auf
+welchem Konto?</li>
+<li><b>Zahlungsdienstleister:</b> Falls wir k=C3=BCnftig Kartenzahlung anbiet=
+en, kommt das Geld nicht
+einzeln, sondern etwa alle sieben Tage als Sammel=C3=BCberweisung abz=C3=BCgl=
+ich Geb=C3=BChren auf das Konto.
+Wie sollen wir Auszahlung und Geb=C3=BChren buchen, damit es f=C3=BCr dich st=
+immt?</li>
+<li><b>Ablauf:</b> Monatlich reicht vermutlich =E2=80=93 auf welchem Weg beko=
+mmst du die Datei am liebsten,
+und brauchst du die Rechnungs-PDFs zus=C3=A4tzlich oder gen=C3=BCgt der Buchu=
+ngsstapel?</li>
+</ol>
+<p>Und eine Bitte mit etwas Zeitdruck: Wir bekommen vom Softwareanbieter demn=
+=C3=A4chst einen Musterexport.
+<b>K=C3=B6nntest du den testweise in RZL einlesen</b>, bevor wir uns endg=C3=
+=BCltig entscheiden? Wenn das nicht
+funktioniert, ist das f=C3=BCr uns ein Ausschlusskriterium =E2=80=93 und das =
+wollen wir vorher wissen, nicht nachher.</p>
+<p>Wenn es dir schneller geht, telefonieren wir kurz; ich schreibe die Antwor=
+ten dann mit.</p>
+<p>Danke dir und beste Gr=C3=BC=C3=9Fe<br>Peter</p>
+</body></html>
+
+--===============1148276478607081221==--
